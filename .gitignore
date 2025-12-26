@@ -1,0 +1,28 @@
+# Build artifacts
+*.o
+*.exe
+*.out
+
+# Executables
+ClassAssignment1
+Check
+ControlStat
+Day1
+Getchar
+LabReport1
+LabReport2
+OneChar
+String
+Test
+
+# Debug symbols
+*.dSYM/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Temporary files
+tempCodeRunnerFile.c
