@@ -18,6 +18,9 @@ Test
 # Debug symbols
 *.dSYM/
 
+# Output directory
+output/
+
 # macOS
 .DS_Store
 
