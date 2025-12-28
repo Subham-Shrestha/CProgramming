@@ -628,20 +628,20 @@ int main(){
     * *
    * * *
   * * * * */
-//  #include<stdio.h>
-//  int main(){
-//     int i, j, space;
-//     for(i = 1; i <= 4; i++){
-//         for(space = 1; space <= 4 - i; space++){
-//             printf(" ");
-//         }
-//         for(j = 1; j <= i; j++){
-//             printf("* ");
-//         }
-//         printf("\n");
-//     }
-//     return 0;
-//  }
+ /* #include<stdio.h>
+ int main(){
+    int i, j, space;
+    for(i = 1; i <= 4; i++){
+        for(space = 1; space <= 4 - i; space++){
+            printf(" ");
+        }
+        for(j = 1; j <= i; j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+ } */
 
 //  WAP to print the following pattern.
 /* 1
@@ -661,3 +661,58 @@ int main(){
 //     return 0;
 // } 
 
+// WAP to print "Try again" until user types the correct digits by initializing the correct value.
+/* #include<stdio.h>
+int main(){
+    int correct = 0, input;
+    printf("Enter correct digit : ");
+    scanf("%d", &input);
+    do{
+        if(input != 0){
+            printf("Try again : ");
+            scanf("%d", &input);
+        }
+        if(input == correct){
+            printf("Correct digit.");
+        }
+    }while(input != 0);
+    return 0;
+} */
+
+// WAP to check the correct pin by giving user to initialize it.
+// #include<stdio.h>
+// int main(){
+//     int initialize, pin;
+//     printf("Enter a pin to initialize : ");
+//     scanf("%d", &initialize);
+    
+// }
+
+// WAP to take a number and print it's reverse value.
+/* #include<stdio.h>
+int main(){
+    int num, reverse = 0, remainder;
+    printf("Enter a number : ");    
+    scanf("%d", &num);
+    while(num != 0){
+        remainder = num %10;
+        reverse = reverse * 10 + remainder;
+        num /= 10;
+    }
+    printf("Reverse value : %d", reverse);
+    return 0;
+} */
+// Do-while loop to print reverse of a number.
+#include<stdio.h>
+int main(){
+    int num, reverse = 0, remainder;
+    printf("Enter a number : ");
+    scanf("%d", &num);
+    do{
+        remainder = num %10;
+        reverse = reverse * 10 + remainder;
+        num /= 10;
+    }while(num != 0);
+    printf("Reverse value : %d", reverse);
+    return 0;
+}
