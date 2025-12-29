@@ -12,27 +12,44 @@ int main(){
     printf("Subject 5: %d\n", marks[4]);
     return 0;
 } */
+/* #include<stdio.h>
+int main(){
+    int marks[5] = {30, 24, 55, 28, 35}; // Initialization of array with values. You can either give array size or not. like there is [5] you can keep it empty.
+    for(int i = 0; i < 5; i++){
+        printf("Subject %d: %d\n", i, marks[i]);
+    }
+    printf("Random marks %d", marks[234]); // Accessing out of bound index leads to garbage value. It either randomly generates or prints 0.
+    return 0;
+} */
+
+// WAP to take input of marks of 5 students and print them using array and loop.
+// One dimensional array example.
 #include<stdio.h>
 int main(){
-    int marks[5] = {30, 24, 55, 28, 35}; // Initialization of array with values
+    int marks[5]; // Declaration of an array of size 5
+    printf("Enter marks of 5 stundets: \n");
     for(int i = 0; i < 5; i++){
-        printf("Subject %d: %d\n", i + 1, marks[i]);
+        scanf("%d", &marks[i]); // Input marks for each subject
+        printf("Subject %d : %d\n", i + 1, marks[i]); // Output marks for each subject
     }
+    
+    // for(int i = 0; i < 5; i++){
+       
+    // }
     return 0;
 }
 
-
-// One dimensional array example.
+// WAP to take input of marks of students of 5 subjects and calculate the total marks.
 /* #include<stdio.h>
 int main(){
-    int marks[5]; // Declaration of an array of size 5
+    int marks[5];
+    int sum = 0;
     printf("Enter marks of 5 subjects: \n");
     for(int i = 0; i < 5; i++){
-        scanf("%d", &marks[i]); // Input marks for each subject
+        scanf("%d", &marks[i]);
+        sum += marks[i];
     }
-    printf("Marks entered are: \n");
-    for(int i = 0; i < 5; i++){
-        printf("Subject %d: %d\n", i + 1, marks[i]); // Output marks for each subject
-    }
+    printf("Total marks obtained: %d\n", sum);
     return 0;
 } */
+
