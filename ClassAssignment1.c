@@ -703,7 +703,7 @@ int main(){
     return 0;
 } */
 // Do-while loop to print reverse of a number.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     int num, reverse = 0, remainder;
     printf("Enter a number : ");
@@ -715,6 +715,6 @@ int main(){
     }while(num != 0);
     printf("Reverse value : %d", reverse);
     return 0;
-}
+} */
 
-// This is something that I am checking.
+// Array in another file.
