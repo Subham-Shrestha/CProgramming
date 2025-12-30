@@ -5,19 +5,15 @@ This repository contains various C programming exercises and assignments complet
 ## Files Overview
 
 ### Array.c
-Comprehensive demonstration of array concepts in C, including:
-- Array initialization and declaration
-- Accessing array elements with proper indexing
-- Using loops to iterate through arrays
-- Examples of one-dimensional arrays with user input and output
-- Array bounds and garbage values when accessing out-of-bounds indices
-- Programs included:
-  - Printing marks of 5 subjects using loops
-  - Taking input for marks of 5 students and displaying them
-  - Calculating total marks of 5 subjects
-  - Printing array elements in reverse order
-  - Finding sum of elements at even indices
-  - Finding the smallest element in a user-defined size array
+Comprehensive demonstration of array concepts in C, now updated to run all programs sequentially:
+- Array initialization and printing without/with loops
+- Taking input for marks of 5 students
+- Calculating total marks of 5 subjects
+- Printing array elements in reverse order
+- Finding sum of elements at even indices
+- Finding the smallest element in an array
+- Finding the greatest element in an array
+- Finding average of 8 numbers
 
 ### Check.c
 Contains programs for various checking operations:
@@ -53,24 +49,36 @@ Demonstrates character input functions:
 - Basic I/O with characters
 
 ### LabReport1.c
-First lab report programs:
-- Simple calculations
-- Basic algorithms
-- Introductory programming exercises
+First lab report programs, now updated to run all programs sequentially:
+- Hello World
+- Simple interest calculation
+- Variable swapping
+- String input and display
+- Area of circle calculation
+- Sum without using + operator
+- Fahrenheit to Celsius conversion
 
 ### LabReport2.c
-Second lab report with more complex programs:
-- Multiple operations
-- Data processing
-- Intermediate programming concepts
+Second lab report with more complex programs, now updated to run all programs sequentially:
+- Time greeting using if-else and switch-case
+- Leap year checking
+- Area calculator (circle, rectangle, triangle)
+- Even/odd checking without else
+- Character type checking (alphabet, digit, special)
+- Calculator using switch-case
+- Uppercase/lowercase checking
 
 ### LapReport3.c
 Third lab report containing various programs:
 - Printing odd numbers from 1 to 50
-- Calculating sum of even numbers up to n
+- Calculating sum of even numbers from 1 to n
 - Counting digits in a number
 - Checking if a number is prime
-- Other mathematical and logical operations
+- Printing all prime numbers up to a given number
+- Checking if a number is a palindrome
+- Printing star patterns (diamond shape)
+- Printing number patterns (odd numbers pyramid)
+- Printing number patterns (symmetric number pyramid)
 
 ### OneChar.c
 Programs dealing with single character operations:

@@ -1,138 +1,111 @@
-// Array basics.
-/* Array is a collection of elements of the same data type stored in contiguous memory locations. 
-   Array index starts with 0 instead of 1.*/
-// Array without using loop when marks is initialized. Using array with loop is encouraged instead of using it wtihout loop.
-/* #include<stdio.h>
+#include <stdio.h>
 int main(){
-    int marks[5] = {30, 24, 55, 28, 35}; // Initialization of array with values
-    printf("Subject 1: %d\n", marks[0]);
-    printf("Subject 2: %d\n", marks[1]);
-    printf("Subject 3: %d\n", marks[2]);
-    printf("Subject 4: %d\n", marks[3]);
-    printf("Subject 5: %d\n", marks[4]);
-    return 0;
-} */
-/* #include<stdio.h>
-int main(){
-    int marks[5] = {30, 24, 55, 28, 35}; // Initialization of array with values. You can either give array size or not. like there is [5] you can keep it empty.
-    for(int i = 0; i < 5; i++){
-        printf("Subject %d: %d\n", i, marks[i]);
-    }
-    printf("Random marks %d", marks[234]); // Accessing out of bound index leads to garbage value. It either randomly generates or prints 0.
-    return 0;
-} */
+    // Program 1: Print marks without loop
+    printf("Program 1: Marks without loop\n");
+    int marks1[5] = {30, 24, 55, 28, 35};
+    printf("Subject 1: %d\n", marks1[0]);
+    printf("Subject 2: %d\n", marks1[1]);
+    printf("Subject 3: %d\n", marks1[2]);
+    printf("Subject 4: %d\n", marks1[3]);
+    printf("Subject 5: %d\n", marks1[4]);
+    printf("\n");
 
-// WAP to take input of marks of 5 students and print them using array and loop.
-// One dimensional array example.
-/* #include<stdio.h>
-int main(){
-    int marks[5]; // Declaration of an array of size 5
-    printf("Enter marks of 5 stundets: \n");
+    // Program 2: Print marks with loop
+    printf("Program 2: Marks with loop\n");
+    int marks2[5] = {30, 24, 55, 28, 35};
     for(int i = 0; i < 5; i++){
-        scanf("%d", &marks[i]); // Input marks for each subject
-        printf("Subject %d : %d\n", i + 1, marks[i]); // Output marks for each subject
+        printf("Subject %d: %d\n", i+1, marks2[i]);
     }
-    
-    // for(int i = 0; i < 5; i++){
-       
-    // }
-    return 0;
-} */
+    printf("Random marks %d\n", marks2[234]); // Out of bounds
+    printf("\n");
 
-// WAP to take input of marks of students of 5 subjects and calculate the total marks.
-/* #include<stdio.h>
-int main(){
-    int marks[5];
-    int sum = 0;
-    printf("Enter marks of 5 subjects: \n");
+    // Program 3: Input marks of 5 students
+    printf("Program 3: Input marks of 5 students\n");
+    int marks3[5];
+    printf("Enter marks of 5 students: ");
     for(int i = 0; i < 5; i++){
-        scanf("%d", &marks[i]);
-        sum += marks[i];
+        scanf("%d", &marks3[i]);
+        printf("Subject %d: %d\n", i + 1, marks3[i]);
     }
-    printf("Total marks obtained: %d\n", sum);
-    return 0;
-} */
+    printf("\n");
 
-// WAP to make and array of size 5 and print them in reverse order.
- /* #include<stdio.h>
-int main(){
-    int arr[5];
-    printf("Enter 5 elements: \n");
+    // Program 4: Calculate total marks
+    printf("Program 4: Calculate total marks\n");
+    int marks4[5], sum4 = 0;
+    printf("Enter marks of 5 subjects: ");
     for(int i = 0; i < 5; i++){
-        scanf("%d", &arr[i]);
+        scanf("%d", &marks4[i]);
+        sum4 += marks4[i];
     }
-    printf("Elements in reverse order: \n");
+    printf("Total marks obtained: %d\n\n", sum4);
+
+    // Program 5: Print array in reverse
+    printf("Program 5: Print array in reverse\n");
+    int arr5[5] = {1, 2, 3, 4, 5}; // Using sample data
+    printf("Elements: ");
+    for(int i = 0; i < 5; i++) printf("%d ", arr5[i]);
+    printf("\nElements in reverse order: ");
     for(int i = 4; i >= 0; i--){
-        printf("%d\n", arr[i]);
+        printf("%d ", arr5[i]);
     }
-    return 0;
-} */
+    printf("\n\n");
 
-// Create an array of size 6 and find the sum of even index values only.
-/* #include<stdio.h>
-int main(){
-    int num[6], sum = 0;
-    printf("Enter the elements of 6 : \n");
+    // Program 6: Sum of even index values
+    printf("Program 6: Sum of even index values\n");
+    int num6[6] = {1, 2, 3, 4, 5, 6}; // Sample data
+    int sum6 = 0;
+    printf("Elements: ");
+    for(int i = 0; i < 6; i++) printf("%d ", num6[i]);
+    printf("\n");
     for(int i = 0; i < 6; i++){
-        scanf("%d", &num[i]);
-        if(i% 2 == 0){
-            sum = sum + num[i];
+        if(i % 2 == 0){
+            sum6 += num6[i];
         }
     }
-    printf("The sum of all even elements is : %d", sum);
-    return 0;
-} */
+    printf("The sum of even index elements is: %d\n\n", sum6);
 
-// WAP to take imput for size of an array and again take input value upto that number and find the smallest one.
-#include<stdio.h>
-int main(){
-    int size;
-    printf("Enter the size of array : \n");
-    scanf("%d", &size);
-    int num[size], smallest = num[0];
-    printf("Enter %d elements : \n", size);
-    for(int i = 0; i < size; i++){
-        scanf("%d", &num[i]);
-    }
-    for(int i = 1; i < size; i++){
-        if(num[i] < smallest){
-            smallest = num[i];
+    // Program 7: Find smallest element
+    printf("Program 7: Find smallest element\n");
+    int size7 = 5;
+    int num7[5] = {10, 5, 8, 2, 15}; // Sample data
+    int smallest = num7[0];
+    printf("Elements: ");
+    for(int i = 0; i < size7; i++) printf("%d ", num7[i]);
+    printf("\n");
+    for(int i = 1; i < size7; i++){
+        if(num7[i] < smallest){
+            smallest = num7[i];
         }
     }
-    printf("The smallest element is : %d\n", smallest);
+    printf("The smallest element is: %d\n\n", smallest);
+
+    // Program 8: Find greatest element
+    printf("Program 8: Find greatest element\n");
+    int size8 = 5;
+    int num8[5] = {10, 5, 8, 2, 15}; // Sample data
+    int greatest = num8[0];
+    printf("Elements: ");
+    for(int i = 0; i < size8; i++) printf("%d ", num8[i]);
+    printf("\n");
+    for(int i = 1; i < size8; i++){
+        if(num8[i] > greatest){
+            greatest = num8[i];
+        }
+    }
+    printf("The greatest element is: %d\n\n", greatest);
+
+    // Program 9: Find average of 8 numbers
+    printf("Program 9: Find average of 8 numbers\n");
+    int num9[8] = {1, 2, 3, 4, 5, 6, 7, 8}; // Sample data
+    int sum9 = 0;
+    float average;
+    printf("Numbers: ");
+    for(int i = 0; i < 8; i++){
+        printf("%d ", num9[i]);
+        sum9 += num9[i];
+    }
+    average = sum9 / 8.0;
+    printf("\nThe average is: %.2f\n", average);
+
     return 0;
 }
-
-// WAP to input values and print the greatest one using array.
-/* #include<stdio.h>
-int main(){
-    int size;
-    printf("Enter the size of array : \n");
-    scanf("%d", &size);
-    int num[size], greatest = num[0];
-    printf("Enter %d elements : \n", size);
-    for(int i = 0; i < size; i++){
-        scanf("%d", &num[i]);
-    }
-    for(int i = 1; i < size; i++){
-        if(num[i] > greatest){
-            greatest = num[i];
-        }
-    }
-    printf("The greatest element is : %d\n", greatest);
-    return 0;
-} */
-// WAP to find average of 8 numbers using array.
-/* #include<stdio.h>
-int main(){
-    int num[8], sum = 0;
-    float average;
-    printf("Enter 8 numbers : \n");
-    for(int i = 0; i < 8; i++){
-        scanf("%d", &num[i]);
-        sum += num[i];
-    }
-    average = sum / 8.0;
-    printf("The average of 8 numbers is : %.2f\n", average);
-    return 0;
-} */
