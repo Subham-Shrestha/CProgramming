@@ -144,7 +144,7 @@ int main(){
 } */
 
 // WAP to print number pyramid pattern.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     int n = 4;
     printf("Number Pyramid Pattern:\n");
@@ -161,4 +161,4 @@ int main(){
         printf("\n");
     }
     return 0;
-}
+} */

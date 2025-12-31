@@ -1,7 +1,7 @@
 // Array basics.
 /* Array is a collection of elements of the same data type stored in contiguous memory locations. 
-   Array index starts with 0 instead of 1.*/
-// Array without using loop when marks is initialized. Using array with loop is encouraged instead of using it wtihout loop.
+   Array index starts with 0 instead of 1.
+Array without using loop when marks is initialized. Using array with loop is encouraged instead of using it wtihout loop. */
 /* #include<stdio.h>
 int main(){
     int marks[5] = {30, 24, 55, 28, 35}; // Initialization of array with values
@@ -84,7 +84,7 @@ int main(){
 } */
 
 // WAP to take imput for size of an array and again take input value upto that number and find the smallest one.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     int size;
     printf("Enter the size of array : \n");
@@ -101,7 +101,7 @@ int main(){
     }
     printf("The smallest element is : %d\n", smallest);
     return 0;
-}
+} */
 
 // WAP to take input for size of an array and find the greatest element.
 /* #include<stdio.h>
@@ -139,3 +139,30 @@ int main(){
     printf("The average is : %.2f\n", average);
     return 0;
 } */
+
+// WAP to find the second largest number in an array.
+/* #include<stdio.h>
+int main(){
+    int size;
+    printf("Enter the size of array : \n");
+    scanf("%d", &size);
+    int num[size];
+    printf("Enter %d elements : \n", size);
+    for(int i = 0; i < size; i++){
+        scanf("%d", &num[i]);
+    }
+    int largest = num[0];
+    int secondLargest = num[1];
+    for(int i = 1; i < size; i++){
+        if(num[i] > largest){
+            secondLargest = largest;
+            largest = num[i];
+        }else if(num[i] != largest && num[i] > secondLargest){
+            secondLargest = num[i];
+        }
+    }
+    printf("The second largest element is : %d\n", secondLargest);
+    return 0;
+} */
+
+// Sorting : Used to arrange elements in ascending or descending order.
