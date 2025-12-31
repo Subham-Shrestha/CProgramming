@@ -5,15 +5,21 @@ This repository contains various C programming exercises and assignments complet
 ## Files Overview
 
 ### Array.c
-Comprehensive demonstration of array concepts in C, now updated to run all programs sequentially:
-- Array initialization and printing without/with loops
-- Taking input for marks of 5 students
-- Calculating total marks of 5 subjects
-- Printing array elements in reverse order
-- Finding sum of elements at even indices
-- Finding the smallest element in an array
-- Finding the greatest element in an array
-- Finding average of 8 numbers
+Comprehensive demonstration of array concepts in C, including:
+- Array initialization and declaration
+- Accessing array elements with proper indexing
+- Using loops to iterate through arrays
+- Examples of one-dimensional arrays with user input and output
+- Array bounds and garbage values when accessing out-of-bounds indices
+- Programs included:
+  - Printing marks of 5 subjects using loops
+  - Taking input for marks of 5 students and displaying them
+  - Calculating total marks of 5 subjects
+  - Printing array elements in reverse order
+  - Finding sum of elements at even indices
+  - Finding the smallest element in a user-defined size array (currently active)
+  - Finding the greatest element in an array
+  - Finding the average of 8 numbers
 
 ### Check.c
 Contains programs for various checking operations:
