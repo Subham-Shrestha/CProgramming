@@ -69,16 +69,16 @@ Second lab report with more complex programs, now updated to run all programs se
 - Uppercase/lowercase checking
 
 ### LapReport3.c
-Third lab report containing various programs:
+Collection of various C programs demonstrating different concepts:
 - Printing odd numbers from 1 to 50
 - Calculating sum of even numbers from 1 to n
 - Counting digits in a number
 - Checking if a number is prime
-- Printing all prime numbers up to a given number
-- Checking if a number is a palindrome
-- Printing star patterns (diamond shape)
-- Printing number patterns (odd numbers pyramid)
-- Printing number patterns (symmetric number pyramid)
+- Printing all prime numbers up to n
+- Checking if a number is palindrome
+- Printing star patterns
+- Printing odd number patterns
+- Printing number pyramid patterns (currently active program)
 
 ### OneChar.c
 Programs dealing with single character operations:
