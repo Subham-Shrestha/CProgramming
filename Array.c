@@ -84,24 +84,26 @@ int main(){
 } */
 
 // WAP to take imput for size of an array and again take input value upto that number and find the smallest one.
-/* #include<stdio.h>
+#include<stdio.h>
+#include<limits.h>
 int main(){
     int size;
     printf("Enter the size of array : \n");
     scanf("%d", &size);
-    int num[size], smallest = num[0];
+    int num[size];
     printf("Enter %d elements : \n", size);
     for(int i = 0; i < size; i++){
         scanf("%d", &num[i]);
     }
-    for(int i = 1; i < size; i++){
+    int smallest = INT_MAX;
+    for(int i = 0; i < size; i++){
         if(num[i] < smallest){
             smallest = num[i];
         }
     }
     printf("The smallest element is : %d\n", smallest);
     return 0;
-} */
+}
 
 // WAP to take input for size of an array and find the greatest element.
 /* #include<stdio.h>
