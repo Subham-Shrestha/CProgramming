@@ -84,26 +84,25 @@ int main(){
 } */
 
 // WAP to take imput for size of an array and again take input value upto that number and find the smallest one.
-#include<stdio.h>
-#include<limits.h>
+/* #include<stdio.h>
 int main(){
     int size;
     printf("Enter the size of array : \n");
     scanf("%d", &size);
-    int num[size];
+    int num[size], smallest ;
     printf("Enter %d elements : \n", size);
     for(int i = 0; i < size; i++){
         scanf("%d", &num[i]);
     }
-    int smallest = INT_MAX;
-    for(int i = 0; i < size; i++){
+    smallest = num[0];
+    for(int i = 1; i < size; i++){
         if(num[i] < smallest){
             smallest = num[i];
         }
     }
     printf("The smallest element is : %d\n", smallest);
     return 0;
-}
+} */
 
 // WAP to take input for size of an array and find the greatest element.
 /* #include<stdio.h>
@@ -168,3 +167,72 @@ int main(){
 } */
 
 // Sorting : Used to arrange elements in ascending or descending order.
+
+// WAP to sort array in ascending roder using selection sort.
+/* #include<stdio.h>
+int main(){
+    int size, i, j;
+    printf("Enter the size of array : \n");
+    scanf("%d", &size);
+    int num[size];
+    printf("Enter %d elements : \n", size);
+    for(int i = 0; i < size; i++){
+        scanf("%d", &num[i]);
+    }
+    // Selection sort algorithm
+    for(i = 0; i < size - 1; i++){
+        for(j = i ; j < size; j++){
+            if(num[i] > num[j]){
+                // Swap num[i] and num[j]
+                int temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+        printf("After %d pass : ", i + 1);
+        for(int k = 0; k < size; k++){
+            printf("%d ", num[k]);
+        }
+        printf("\n");
+    }
+    printf("Array in ascending order : \n");
+    for(int i = 0; i < size; i++){
+        printf("%d\n", num[i]);
+    }
+    return 0;
+} */
+
+// Sort in descending order using selection sort.
+#include<stdio.h>
+int main(){
+    int size, i, j;
+    printf("Enter the size of array : \n");
+    scanf("%d", &size);
+    int num[size];
+    printf("Enter %d elements : \n", size);
+    for(int i = 0; i < size; i++){
+        scanf("%d", &num[i]);
+    }
+    // Selection sort algorithm for descending order
+    for(i = 0; i < size - 1; i++){
+        for(j = i ; j < size; j++){
+            if(num[i] < num[j]){    
+                // Swap num[i] and num[j]
+                int temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+        printf("After %d pass : ", i + 1);
+        for(int k = 0; k < size; k++){
+            printf("%d ", num[k]);
+        }
+        printf("\n");
+    }
+    printf("Array in descending order : \n");
+    for(int i = 0; i < size; i++){
+        printf("%d ", num[i]);
+    }
+    printf("\n");
+    return 0;
+}
