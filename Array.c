@@ -282,13 +282,14 @@ int main(){
         for(int j = 0; j < col; j++){
             printf("Column %d : ", j+1);
             scanf("%d", &arr[i][j]);
+            sum += arr[i][j];  // You can also calculate sum here while taking input.
         }
     }
     printf("Array formed is : \n");
     for(int i = 0; i < row ; i++){
         for(int j = 0; j < col; j++){
             printf("%d ", arr[i][j]);
-            sum += arr[i][j];
+            sum += arr[i][j];   // You can also calculate sum here while printing the array.
         }
         printf("\n");
     }
