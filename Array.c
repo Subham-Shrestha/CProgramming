@@ -203,7 +203,7 @@ int main(){
 } */
 
 // Sort in descending order using selection sort.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     int size, i, j;
     printf("Enter the size of array : \n");
@@ -234,5 +234,64 @@ int main(){
         printf("%d ", num[i]);
     }
     printf("\n");
+    return 0;
+} */
+
+// Multidimensional arrays : Arrays with more than one dimension. Like 2D array, 3D array etc.
+// WAP to store value in multidimensional 2D array and print them.
+/* #include<stdio.h>
+int main(){
+    int mul[2][3];
+    printf("Enter the elements : \n");
+    for(int i = 0; i <2 ; i++){
+        printf("Enter elements for row %d : \n", i + 1);
+        for(int j = 0; j < 3; j++){
+            printf("Enter element %d : ", j + 1);
+            scanf("%d", &mul[i][j]);
+        }
+    }
+    for(int i = 0; i<2; i++){
+        for(int j = 0; j<3; j++){
+            printf("%d ", mul[i][j]);
+        }
+        printf("\n");
+    }
+/ Initializing 2D array.
+    int arr[2][3] = {{30, 28, 52}, {40, 36, 29}};
+    printf("New 2D array : \n");
+    for(int i = 0; i<2; i++){
+        for(int j = 0; j<3; j++){
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+} */
+
+// WAP to take input for rows and column and take input for elements and find their whole sum.
+#include<stdio.h>
+int main(){
+    int row, col;
+    printf("Enter number of rows  : \n");
+    scanf("%d", &row);
+    printf("Enter column : \n");
+    scanf("%d", &col);
+    int arr[row][col] , sum =0;
+    for(int i = 0; i<row; i++){
+        printf("Row %d : \n", i+1);
+        for(int j = 0; j < col; j++){
+            printf("Column %d : ", j+1);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    printf("Array formed is : \n");
+    for(int i = 0; i < row ; i++){
+        for(int j = 0; j < col; j++){
+            printf("%d ", arr[i][j]);
+            sum += arr[i][j];
+        }
+        printf("\n");
+    }
+    printf("Sum : %d" , sum);
     return 0;
 }

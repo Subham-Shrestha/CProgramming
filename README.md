@@ -17,7 +17,13 @@ Comprehensive demonstration of array concepts in C, including:
   - Calculating total marks of 5 subjects
   - Printing array elements in reverse order
   - Finding sum of elements at even indices
-  - Finding the smallest element in a user-defined size array (currently active)
+  - Finding the smallest element in a user-defined size array
+  - Finding the greatest element in an array
+  - Finding the average of 8 numbers
+  - Finding the second largest element in an array
+  - Selection sort in ascending order with pass printing
+  - Selection sort in descending order with pass printing
+  - Multidimensional (2D) array input and output (currently active)
   - Finding the greatest element in an array
   - Finding the average of 8 numbers
 
