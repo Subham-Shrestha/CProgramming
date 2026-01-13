@@ -59,19 +59,56 @@ int main(){
 } */
 
 // WAP to create emoji code using emoji.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
-    char emoji[] = "\U0001F600";
-    printf("Emoji code is: %s\n", emoji);
+    char emoji[] = "\U0001F642";
+    printf("%s\n", emoji);
     return 0;
-}
+} */
 
 // WAP to input full name and print welcome "full name".
 /* #include<stdio.h>
 int main(){
-    char name[100];
+    char name[563748];
     printf("Enter your full name: ");
-    scanf("%s", &name);
-    printf("Welcome %s\n", name);
+    fgets(name,sizeof(name),stdin);
+    printf("Welcome ");
+    fputs(name, stdout);
     return 0;
 } */
+
+// WAP to reverse a string and display it.
+/* #include<stdio.h>
+int main(){
+    char name[100];
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    int i = 0, count = 0;
+    while(name[i] != '\0'){
+        count++;
+        i++;
+    }
+    printf("Reversed is : ");
+    for(i = count - 1; i>=0; i--){
+        printf("%c\t", name[i]);
+        // printf("%d\n", name[i]);
+    }
+    // char asc[] = "K";
+    // printf("\n%d", asc[0]);
+} */
+
+// WAP to checj uf two strings are same or not.
+#include<stdio.h>
+int main(){
+    char name1[50], name2[50];
+    printf("Enter first name and second name : ");
+    scanf("%s %s", name1, name2);
+    if(name1 == name2){
+        printf("Same\n");
+    }else{
+        printf("Same Same but different.\n");
+    }
+    printf("Memory of n1 : %d\n", name1);
+    printf("Memory of n2 : %d\n", name2);
+    return 0;
+}
