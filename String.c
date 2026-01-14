@@ -98,7 +98,7 @@ int main(){
 } */
 
 // WAP to checj uf two strings are same or not.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     char name1[50], name2[50];
     printf("Enter first name and second name : ");
@@ -111,4 +111,55 @@ int main(){
     printf("Memory of n1 : %d\n", name1);
     printf("Memory of n2 : %d\n", name2);
     return 0;
-}
+} */
+
+// WAP to convert a string to uppercase
+/* #include<stdio.h>
+int main(){
+    char name[50] = "Ram", ucase[50];
+    int i = 0;
+    printf("ASCII value of R = %d\n", name[0]);
+    printf("ASCII value of a = %d\n", name[1]);
+    printf("ASCII value of m = %d\n", name[2]);
+    while(name[i]!='\0'){
+        printf("ASCII value of the name = %d\n", name[i]);
+        i++;
+    }
+    int j = 0;
+    while(name[j] != '\0'){
+        if(name[i]>= 'a' && name[i]>= 'z'){
+            ucase[j] = name[j] - 32;
+            printf("Uppercase = %c \n", ucase[j]);
+            printf("ASCII value of upper case = %d\n", ucase[j]);
+        }
+        j++;
+    }
+    return 0;
+} */
+
+// WAP to uppercase string using the prebuilt function.
+/* #include<stdio.h>
+#include<string.h>
+int main(){
+    char name[50] = "Ram";
+    strupr(name);
+    printf("Upper case : %s \n", name);
+} */
+
+// WAP to calculate the length of string
+/* #include<stdio.h>
+#include<string.h>
+int main(){
+    char name[50] = "Ram";
+    int length = strlen(name);
+    printf("%d", length);
+} */
+
+// WAP to reverse string.
+/* #include<stdio.h>
+#include<string.h>
+int main(){
+    char name[50] = "Ram";
+    strrev(name);
+    printf("Reverse = %s", name);
+} */
