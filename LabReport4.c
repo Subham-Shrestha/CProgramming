@@ -221,7 +221,7 @@ int main() {
 } */
 
 // WAP to copy one array to another.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     int size;
     printf("Enter the size of array : ");
@@ -237,4 +237,4 @@ int main(){
         printf("%d\n", copy[j]);
     }
     return 0;
-}
+} */
