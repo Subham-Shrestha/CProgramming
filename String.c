@@ -163,3 +163,85 @@ int main(){
     strrev(name);
     printf("Reverse = %s", name);
 } */
+
+// WAP to concatenate the string without using strcat.
+/* #include<stdio.h>
+int main(){
+    char name[50], name2[50];
+    printf("Enter first name: ");
+    scanf("%s", &name);
+    printf("Enter last name : ");
+    scanf("%s", &name2);
+    printf("Full name is : %s %s", name, name2);
+    return 0;
+} */
+
+// WAP to check the greatest string among 3 string.
+/* #include<stdio.h>
+#include<string.h>
+int main(){
+    char str1[100], str2[100], str3[100];
+    printf("Enter 3 strings separated by space : ");
+    scanf("%s %s %s", str1, str2, str3);
+    int len1 = strlen(str1), len2 = strlen(str2), len3 = strlen(str3);
+    if(len1 != len2 && len2 != len3 && len1 != len3){
+        if(len1 > len2 && len1 > len3){
+            printf("%s is greatest.", str1);
+        }else if(len2 > len1 && len2 > len3){
+            printf("%s is greatest.", str2);
+        }else{
+            printf("%s is greatest.", str3);
+        }
+    }else{
+        printf("There are strings of equal length.");
+    }
+    return 0;
+}  */
+
+// WAP to ocunt number of vowels in a given string.
+/* #include<stdio.h>
+#include<string.h>
+int main(){
+    char str[100];
+    printf("Enter a string : ");
+    scanf("%s", str);
+    int vowel = 0, count = 0;
+    while(str[count] != '\0'){
+        if(str[count] == 'a' || str[count] == 'e' || str[count] == 'i' || str[count] == 'o' || str[count] == 'u' || str[count] == 'A' || str[count] == 'E' || str[count] == 'I' || str[count] == 'O' || str[count] == 'U'){
+            vowel++;
+        }
+        count++;
+    }
+    printf("The number of vowels is : %d", vowel);
+} */
+
+// WAP to inout a string and count the number of spaces in it.
+/* #include<stdio.h>
+#include<string.h>
+int main(){
+    char str[10000];
+    printf("Enter sentence : ");
+    fgets(str,sizeof(str), stdin);
+    int count = 0, space = 0;
+    while(str[count] != '\0'){
+        if(str[count] == ' '){
+            space++;
+        }
+        count++;
+    }
+    printf("The number of spaces %d", space);
+    return 0;
+} */
+
+// WAP to check if a given string is palindrome or not.
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str[1000];
+//     printf("Enter string without space : ");
+//     scanf("%s", str);
+//     char rev = strrev(str);
+
+// }
+
+// WAP to inout name of 5 cities and display them.
