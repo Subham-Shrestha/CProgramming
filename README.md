@@ -2,6 +2,8 @@
 
 This repository contains various C programming exercises and assignments completed during Semester 1. It serves as a collection of basic to intermediate C programs for learning and reference.
 
+> Updated: 2026-01-22 — README refreshed with push instructions.
+
 ## Files Overview
 
 ### Array.c
@@ -127,6 +129,24 @@ To run the executable:
 ```
 ./output/filename
 ```
+
+## How to Push This Repo to GitHub
+
+1. Ensure a remote is configured (replace URL with your repository):
+
+```
+git remote add origin git@github.com:your-username/your-repo.git
+```
+
+2. Commit any local changes and push the current branch:
+
+```
+git add README.md
+git commit -m "Update README"
+git push -u origin $(git rev-parse --abbrev-ref HEAD)
+```
+
+If you prefer HTTPS, use the HTTPS remote URL instead of the SSH URL.
 
 ## Learning Objectives
 
