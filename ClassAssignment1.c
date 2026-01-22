@@ -718,3 +718,129 @@ int main(){
 } */
 
 // Array in another file.
+
+// WAP to convert metric
+// #include<stdio.h>
+// #include<math.h>
+// void cmToM(float cm, float m, float convertcm, float convertm){
+//     convertcm = m * 0.01;
+//     convertm = cm * 100;
+//     printf("The cm to m is : %.2f\n", convertcm);
+//     printf("The m to cm is : %.2f\n", convertm); 
+// }
+// void m_to_km(float m2, float km, float convertm2, float convertkm){
+//     convertm2 = km * 0.001;
+//     convertkm = m2 * 1000;
+//     printf("The m to km is : .%2f\n", convertm2);
+//     printf("The km to m is : %.2f\n", convertkm);
+// }
+// void in_to_ft(float in, float ft, float convertin, float convertft){
+//     convertin = ft * 0.0833;
+//     convertft = in * 12;
+//     printf("The in to ft is : %.2f\n", convertin);
+//     printf("The ft to in is : %.2f\n", convertft);
+// }
+// void ft_to_m(float ft2, float m3, float convertft2, float convertm3){
+//     convertft2 = m3 * 0.3048;
+//     convertm3 = ft2 * 3.280;
+//     printf("The ft to m is : %.2f\n", convertft2);
+//     printf("The m to ft is : %.2f\n", convertm3);
+// }
+// int main(){
+//     float cm, m, m2, km, in, ft, ft2, m3, convertcm, convertm, convertm2, convertkm, convertin, convertft, convertft2, convertm3;
+//     printf("Enter cm to convert to m : ");
+//     scanf("%.2f\n", &cm);
+//     printf("ENter m to km : ");
+//     scanf("%.2f\n", &m2);
+//     printf("ENter in to ft : ");
+//     scanf("%.2f\n", &in);
+//     printf("Enter ft to m : ");
+//     scanf("%.2f\n", &ft2);
+//     cmToM(cm,  m,  convertcm, convertm);
+//     m_to_km(m2, km, convertm2, convertkm);
+//     in_to_ft(in, ft, convertin, convertft);
+//     ft_to_m(ft2, m3, convertft2, convertm3);
+//     return 0;
+// }
+
+// #include<stdio.h>
+// #include<math.h>
+
+// void cmToM(float cm) {
+//     float convertcm = cm / 100;  // 1 m = 100 cm
+//     printf("The cm to m is: %.2f\n", convertcm);
+// }
+
+// void m_to_km(float m) {
+//     float convertkm = m / 1000;   // 1 km = 1000 m
+//     printf("The m to km is: %.2f\n", convertkm);
+// }
+
+// void in_to_ft(float in) {
+//     float convertft = in / 12;     // 1 ft = 12 in
+//     printf("The in to ft is: %.2f\n", convertft);
+// }
+
+// void ft_to_m(float ft) {
+//     float convertm = ft * 0.3048;   // 1 ft = 0.3048 m
+//     printf("The ft to m is: %.2f\n", convertm);
+// }
+
+// int main() {
+//     float cm, m, in, ft;
+
+//     printf("Enter cm to convert to m: ");
+//     scanf("%f", &cm); // Corrected scanf
+//     cmToM(cm);
+
+//     printf("Enter m to convert to km: ");
+//     scanf("%f", &m); // Corrected scanf
+//     m_to_km(m);
+
+//     printf("Enter in to convert to ft: ");
+//     scanf("%f", &in); // Corrected scanf
+//     in_to_ft(in);
+
+//     printf("Enter ft to convert to m: ");
+//     scanf("%f", &ft); // Corrected scanf
+//     ft_to_m(ft);
+
+//     return 0;
+// }
+
+#include<stdio.h>
+#include<math.h>
+
+void aana(float cm) {
+    float convertcm = cm * 4;  
+    printf("The sq metre of aana is: %.2f\n", convertcm);
+}
+
+void paisa(float m) {
+    float convertkm = m * 3/4;  
+    printf("The sq metre of paisa is: %.2f\n", convertkm);
+}
+
+void dam(float in) {
+    float convertft = in * 3/16;    
+    printf("The sq metre of dam is: %.2f\n", convertft);
+}
+
+int main() {
+    float cm, m, in;  // cm = aana, m = paisa, in = dam
+
+    printf("Enter aana : ");
+    scanf("%f", &cm); // Corrected scanf
+    aana(cm);
+
+    printf("Enter paisa : ");
+    scanf("%f", &m); // Corrected scanf
+    paisa(m);
+
+    printf("Enter dam : ");
+    scanf("%f", &in); // Corrected scanf
+    dam(in);
+
+
+    return 0;
+}
