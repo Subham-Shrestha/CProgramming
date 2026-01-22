@@ -36,8 +36,8 @@ int main(){
 //     fgets(str, sizeof(str), stdin);
 //     for(int i = 0; str[i] != '\0'; i++){
 //         char ch = str[i];
-//             // ch = tolower(ch);
-//             if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+//             if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+//                ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'){
 //                 vowels++;
 //             } else {
 //                 consonants++;
@@ -76,9 +76,7 @@ int main(){
     printf("Enter 5 city names : \n");
     for(int i = 0; i < 5; i++){
         fgets(cities[i], sizeof(cities[i]), stdin);
-        cities[i][strcspn(cities[i], "\n")] = 0; // Remove newline character
     }
-    // Sorting in ascending order
     for(int i = 0; i < 5 - 1; i++){
         for(int j = i + 1; j < 5; j++){
             if(strcmp(cities[i], cities[j]) > 0){
