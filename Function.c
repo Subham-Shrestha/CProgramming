@@ -222,3 +222,52 @@ int main(){
 } */
 
 // WAP to input two numbers and a character. Then perform add, sub, multiply, divide making all functions and perform calculation inside a function calculation().
+#include<stdio.h>
+void add(float num1, float num2){
+    float sum = num1 + num2;
+    printf("The sum is : %.2f\n", sum);
+}
+void sub(float num1, float num2){
+    float difference = num1 - num2;
+    printf("The difference is : %.2f\n", difference);
+}
+void mul(float num1, float num2){
+    float product = num1 * num2;
+    printf("The product is : %.2f\n", product);
+}
+void div(float num1, float num2){
+    if(num2 == 0){
+        printf("Division by zero is not allowed.\n");
+    }else{
+        float division = num1 / num2;
+        printf("The division is : %.2f\n", division);
+    }
+}
+void calculation(float num1, float num2, char operator){
+    switch(operator){
+        case '+':
+            add(num1, num2);
+            break;
+        case '-':
+            sub(num1, num2);
+            break;
+        case '*':
+            mul(num1, num2);
+            break;
+        case '/':
+            div(num1, num2);
+            break;
+        default:
+            printf("Invalid operator.\n");
+    }
+}
+int main(){
+    float num1, num2;
+    char operator;
+    printf("Enter two numbers separated by space : ");
+    scanf("%f %f", &num1, &num2);
+    printf("Enter an operator (+, -, *, /) : ");
+    scanf(" %c", &operator);
+    calculation(num1, num2, operator);
+    return 0;
+}
