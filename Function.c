@@ -222,7 +222,7 @@ int main(){
 } */
 
 // WAP to input two numbers and a character. Then perform add, sub, multiply, divide making all functions and perform calculation inside a function calculation().
-#include<stdio.h>
+/* #include<stdio.h>
 void add(float num1, float num2){
     float sum = num1 + num2;
     printf("The sum is : %.2f\n", sum);
@@ -270,4 +270,65 @@ int main(){
     scanf(" %c", &operator);
     calculation(num1, num2, operator);
     return 0;
+} */
+
+// WAP to demonstrate local and global variable. (Used in tax calculation).
+/* #include<stdio.h>
+#include<string.h>
+int b = 10;
+void display(){
+    int a = 5;
+    printf("inside function a = %d\n", a);
+    printf("inside b = %d\n", b);
 }
+int main(){
+    display();
+    printf("b = %d", b);
+    return 0;
+} */
+
+// #include<stdio.h>
+// void display(){
+//     int count = 0;
+//     count ++;
+//     printf("Count value = %d\n", count);
+// }
+// int main(){
+//     display();
+//     display();
+//     display();
+//     return 0;
+// }
+
+// #include<stdio.h>
+// void display(){
+//     static int count = 0;
+//     count ++;
+//     printf("Count value = %d\n", count);
+// }
+// int main(){
+//     display();
+//     display();
+//     display();
+//     return 0;
+// }
+
+// #include<stdio.h>
+// void display(){
+//     register int count = 0;
+//     printf("Count value = %d\n", count);
+// }
+// int main(){
+//     display();
+//     return 0;
+// }
+
+/* #include<stdio.h>
+void display(){
+    auto int count = 0;
+    printf("Count value = %d\n", count);
+}
+int main(){
+    display();
+    return 0;
+} */
