@@ -332,3 +332,90 @@ int main(){
     display();
     return 0;
 } */
+
+// WAP to print numbers from 1 to 5 using recursion.
+/* #include<stdio.h>
+void print_num(int n){
+    if(n > 5){
+        return;
+    }else{
+        printf("%d ", n);
+        print_num(n+1);
+    }
+}
+int main(){
+    print_num(1);
+    return 0;
+} */
+
+// WAP to print numbers from 5 to 1 using recursion.
+/* #include<stdio.h>
+void print_num(int n){
+    if(n < 1){
+        return;
+    }
+    else{
+        printf("%d ", n);
+        print_num(n-1);
+    }
+}
+int main(){
+    print_num(5);
+    return 0;
+} */
+
+// WAP to print numbers from n to 1 using recursion.
+/* #include<stdio.h>
+void print_num(int n){
+    if(n < 1){
+        return;
+    }
+    else{
+        printf("%d ", n);
+        print_num(n-1);
+    }
+}
+int main(){
+    int num;
+    printf("Enter a number : ");
+    scanf("%d", &num);
+    print_num(num);
+    return 0;
+} */
+
+// WAP to print numbers from 1 to n using recursion.
+/* #include<stdio.h>
+void print_num(int n){
+    if(n < 1){
+        return;
+    }
+    else{
+        print_num(n-1);
+        printf("%d ", n);
+    }
+}
+int main(){
+    int num;
+    printf("Enter a number : ");
+    scanf("%d", &num);
+    print_num(num);
+    return 0;
+} */
+
+// WAP to inpujt and find factorial of the number using recursion.
+#include<stdio.h>
+int factorial(int n){
+    if(n == 0 || n == 1){
+        return 1;
+    }else{
+        return n * factorial(n - 1);
+    }
+}
+int main(){
+    int num;
+    printf("Enter a number to find its factorial : ");
+    scanf("%d", &num);
+    int fact = factorial(num);
+    printf("The factorial of %d is : %d\n", num, fact);
+    return 0;
+}

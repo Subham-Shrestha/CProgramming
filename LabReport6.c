@@ -9,7 +9,7 @@ void check_even_odd(int num){
 }
 int main(){
     int number;
-    printf("Enter a number to check even or odd : ");
+    printf("Enter a number : ");
     scanf("%d", &number);
     check_even_odd(number);
     return 0;
@@ -54,7 +54,7 @@ void check_prime(int num){
 }
 int main(){
     int number;
-    printf("Enter a number to check prime or not : ");
+    printf("Enter a number : ");
     scanf("%d", &number);
     check_prime(number);
     return 0;
