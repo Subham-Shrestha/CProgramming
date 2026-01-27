@@ -93,3 +93,77 @@ int main(){
     int pass = ran();
     printf("The pin is : %d\n", pass);
 } */
+
+// WAP to multiply two numbers using frecursive funcction.
+/* #include<stdio.h>
+int multiply(int a, int b){
+    if(a == 0 || b == 0){
+        return 0;
+    }else{
+        return a + multiply(a, b - 1);
+    }
+}
+int main(){
+    int num1, num2;
+    printf("Enter two numbers separated by space : ");
+    scanf("%d %d", &num1, &num2);
+    int result = multiply(num1, num2);
+    printf("The multiplication of %d and %d is : %d\n", num1, num2, result);
+    return 0;
+} */
+
+// WAP to input a number and display it's reverse using recursion function
+/* #include<stdio.h>
+void reverse_num(int num){
+    if(num == 0){
+        return;
+    }else{
+        printf("%d", num % 10);
+        reverse_num(num / 10);
+    }
+}
+int main(){
+    int number;
+    printf("Enter a number to reverse : ");
+    scanf("%d", &number);
+    printf("The reverse of %d is : ", number);
+    reverse_num(number);
+    printf("\n");
+    return 0;
+} */
+
+// wAP to display first 10 numbers of fibonacci series using recursion.
+/* #include<stdio.h>
+void fibonacci(int n1, int n2, int count){
+    if(count < 10){
+        int n3 = n1 + n2;
+        printf("%d ", n3);
+        fibonacci(n2, n3, count + 1);
+    }
+}
+int main(){
+    int n1 = 0, n2 = 1;
+    printf("%d %d ", n1, n2);
+    fibonacci(n1, n2, 2);
+    printf("\n");
+    return 0;
+} */
+
+// WAP to print fibonacci series upto n terms using recursion.
+/* #include<stdio.h>
+void fibonacci(int n,int n1, int n2, int count){
+    if(count < n){
+        int n3 = n1 + n2;
+        printf("%d ", n3);
+        fibonacci(n, n2, n3, count + 1);
+    }
+}
+int main(){
+    int n1 = 0, n2 = 1, n;
+    printf("Enter the number of terms in Fibonacci series : ");
+    scanf("%d", &n);
+    printf("%d %d ", n1, n2);
+    fibonacci(n, n1, n2, 2);
+    printf("\n");
+    return 0;
+} */

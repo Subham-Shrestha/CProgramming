@@ -403,7 +403,7 @@ int main(){
 } */
 
 // WAP to inpujt and find factorial of the number using recursion.
-#include<stdio.h>
+/* #include<stdio.h>
 int factorial(int n){
     if(n == 0 || n == 1){
         return 1;
@@ -418,4 +418,47 @@ int main(){
     int fact = factorial(num);
     printf("The factorial of %d is : %d\n", num, fact);
     return 0;
+} */
+
+/* #include<stdio.h>
+int findFactorial(int num){
+    if(num == 1){
+        return 1;
+    }
+    else{
+        return num * findFactorial(num - 1);
+    }
 }
+int main(){
+    int fact = findFactorial(4);
+    printf("Factorial = %d\n", fact);
+    return 0;
+} */
+
+// Fibonacci series main formula = f(n) = f(n-1) + f(n-2)
+
+// WAP to find 2nd index value of fibonacci series using recursion.
+/* #include<stdio.h>
+int findFibo(int i){
+    if(i == 0){
+        return 0;
+    }
+    else if(i == 1){
+        return 1;;
+    }
+    else{
+        return findFibo(i - 1) + findFibo(i - 2);
+    }
+}
+int main(){
+    int index;
+    printf("Enter the index : ");
+    scanf("%d", &index);
+    int fiboValue = findFibo(index);
+    printf("The fibonacci value at index %d is : %d\n", index, fiboValue);
+    // int secFibo = findFibo(2);
+    // printf("The fibonacci value at index 2 is : %d\n", secFibo);
+    return 0;   
+} */
+
+// WAP to input 

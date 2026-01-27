@@ -808,7 +808,7 @@ int main(){
 //     return 0;
 // }
 
-#include<stdio.h>
+/* #include<stdio.h>
 #include<math.h>
 
 void aana(float cm) {
@@ -842,5 +842,21 @@ int main() {
     dam(in);
 
 
+    return 0;
+} */
+
+// WAP to display fibonacci series using loop.
+#include<stdio.h>
+int main(){
+    long n, t1 = 0, t2 = 1, nextTerm;
+    printf("Enter the number of terms: ");
+    scanf("%ld", &n);
+    printf("Fibonacci Series: \n");
+    for(int i = 1; i <= n; ++i){
+        printf("%ld ", t1);
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+    }
     return 0;
 }
