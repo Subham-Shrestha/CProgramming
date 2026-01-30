@@ -105,10 +105,10 @@ int multiply(int a, int b){
 }
 int main(){
     int num1, num2;
-    printf("Enter two numbers separated by space : ");
+    printf("Enter two numbers : ");
     scanf("%d %d", &num1, &num2);
     int result = multiply(num1, num2);
-    printf("The multiplication of %d and %d is : %d\n", num1, num2, result);
+    printf("The multiplication is : %d\n", result);
     return 0;
 } */
 
@@ -150,7 +150,7 @@ int main(){
 } */
 
 // WAP to print fibonacci series upto n terms using recursion.
-/* #include<stdio.h>
+#include<stdio.h>
 void fibonacci(int n,int n1, int n2, int count){
     if(count < n){
         int n3 = n1 + n2;
@@ -166,4 +166,4 @@ int main(){
     fibonacci(n, n1, n2, 2);
     printf("\n");
     return 0;
-} */
+} 
