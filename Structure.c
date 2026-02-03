@@ -52,5 +52,12 @@
         for (int i = 0; i < 3; i++){
             printf("%d\t%s\t%d\n", std[i].roll, std[i].name, std[i].age);
         }
+        int min_age = 0;
+        for(int i = 0; i < 3; i++){
+            if(std[i].age < std[min_age].age){
+                min_age = i;
+            }
+        }
+        printf("Youngest Student : %d %s %d\n", std[min_age].roll, std[min_age].name, std[min_age].age);
         return 0;
     }
