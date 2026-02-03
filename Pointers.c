@@ -119,7 +119,7 @@ int main(){
     return 0;
 } */
 
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     int a = 10;
     int *p, **q;
@@ -132,5 +132,62 @@ int main(){
     printf("Address of a = %p\n", &a);
     printf("Address of *p = %p\n", &p);
     printf("Address of **q = %p\n", &q);
+    return 0;
+} */
+
+// WAP to find sum of an array elements using pointer
+/* #include<stdio.h>
+int main(){
+    int arr[5] = {1,2,3,4,5};
+    int *p, *q;
+    // p = &arr[0];
+    // q = &arr[4];
+    printf("%d\n", &arr[0]);
+    printf("%d", &arr[1]);
+    // int sum = 0;
+    // while(p<=q){ //Here we are comparing..........................(fill in the blanks)
+    //     sum = sum + *p;
+    //     p++;
+    // }
+    // printf("Sum = %d\n", sum);
+    return 0;
+} */
+
+// WAP to print the reverse of an array elements using poointer.
+// #include<stdio.h>
+// int main(){
+//     int arr[5] = {1,2,3,4,5};
+//     int *p;
+//     p = &arr[4];
+//     while(p>=arr){
+//         printf("%d ", *p);
+//         p--;
+//     }
+//     return 0;
+// }
+
+// WAP to return status : Login Successful
+// #include<stdio.h>
+// char *getMessage(){
+//     return "Status : Login Successful";
+// }
+// int main(){
+//     char *status;
+//     status = getMessage();
+//     printf("%s\n", status);
+//     return 0;
+// }
+
+#include<stdio.h>
+void test(int a, int *p){
+    a = a + 5;
+    *p = *p + 5;
+    printf("Inside test value of a = %d *p = %d\n", a, *p);
+}
+int main(){
+    int a = 2, b = 7;
+    printf("Value of a = %d b = %d\n", a, b);
+    test(a, &b);
+    printf("Afetr test call, a = %d b = %d\n", a, b);
     return 0;
 }

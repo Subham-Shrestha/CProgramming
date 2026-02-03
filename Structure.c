@@ -24,14 +24,33 @@
     printf("Name : %s\n", std.name);
     printf("Age : %d\n", std.age);  */
 
-    // Book System.
-    struct Book{
-        int id;
-        char name[100];
-        float price;
+    // // Book System.
+    // struct Book{
+    //     int id;
+    //     char name[100];
+    //     float price;
+    // };
+    // int main(){
+        
+    // }
+    
+    // // return 0;
+
+    struct Student{
+        int roll;
+        char name[50];
+        int age;
     };
     int main(){
-        
+        struct Student std[3];
+        printf("Enter details of 3 students (start from roll, name and age) : \n");
+        for (int i = 0; i < 3; i++){
+            scanf("%d %s %d", &std[i].roll,std[i].name,&std[i].age);
+        }
+        printf("Details of Students : \n");
+        printf("Roll\tName\tAge\n");
+        for (int i = 0; i < 3; i++){
+            printf("%d\t%s\t%d\n", std[i].roll, std[i].name, std[i].age);
+        }
+        return 0;
     }
-    
-    // return 0;
