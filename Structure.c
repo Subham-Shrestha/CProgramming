@@ -1,6 +1,7 @@
 // WAP to store name, roll, age of a student in a structure and display it.
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 /* struct Student{
     int roll;
     char name[50];
@@ -63,28 +64,89 @@
     } */
 
     // WAP to store details of 5 employees and display the detauls of highest paid salary.
-    struct Employee{
+    /* struct Employee{
         int id;
         char name[50];
         float salary;
     };
     int main(){
-        struct Employee emp[5];
-        printf("Enter details of 5 employees (start from id, first name and salary) : \n");
-        for (int i = 0; i < 5; i++){
+        // struct Employee emp[5]; [For 5 employees]
+        int n;
+        printf("Enter number of employees : "); //[For n employees]
+        scanf("%d", &n);
+        struct Employee emp[n];
+        printf("Enter details of %d employees (start from id, first name and salary) : \n", n);
+        for (int i = 0; i < n; i++){
             scanf("%d %s %f", &emp[i].id, emp[i].name, &emp[i].salary);
         }
         printf("Details of Employees : \n");
         printf("ID\tName\tSalary\n");
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < n; i++){
             printf("%d\t%s\t%.2f\n", emp[i].id, emp[i].name, emp[i].salary);
         }
         int max_salary = 0;
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < n; i++){
             if(emp[i].salary > emp[max_salary].salary){
                 max_salary = i;
             }
         }
         printf("Highest Paid Employee : %d %s %.2f\n", emp[max_salary].id, emp[max_salary].name, emp[max_salary].salary);
         return 0;
+    } */
+   
+   //Using pointer to structure
+/* struct Employee
+{
+    int id;
+    char name[50];
+    float salary;
+};
+int main()
+{
+    int n;
+    printf("Enter number of employees : ");
+    scanf("%d", &n);
+    struct Employee *emp;
+    emp = malloc(n * sizeof(struct Employee));
+//    emp = (struct Employee *)malloc(sizeof(struct Employee));  For semantic error correction.
+    printf("Enter details of %d employees (start from id, first name and salary) : \n", n);
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d %s %f", &emp[i].id, emp[i].name, &emp[i].salary);
     }
+    printf("Details of Employees : \n");
+    printf("ID\tName\tSalary\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d\t%s\t%.2f\n", emp[i].id, emp[i].name, emp[i].salary);
+    }
+    int max_salary = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (emp[i].salary > emp[max_salary].salary)
+        {
+            max_salary = i;
+        }
+    }
+    printf("Highest Paid Employee : %d %s %.2f\n", emp[max_salary].id, emp[max_salary].name, emp[max_salary].salary);
+    return 0;
+} */
+struct Student{
+    int roll;
+    char name[50];
+    struct Birthdate{
+        int dd, mm, yy;
+    } dob;
+};
+int main(){
+    struct Student std;
+    printf("Enter roll, name and date of birth (dd mm yy) : ");
+    scanf("%d %s %d %d %d", &std.roll, std.name, &std.dob.dd, &std.dob.mm, &std.dob.yy);
+    printf("Details of student : \n");
+    printf("Roll : %d\n", std.roll);
+    printf("Name : %s\n", std.name);
+    printf("Date of Birth : %d/%d/%d\n", std.dob.dd, std.dob.mm, std.dob.yy);
+    return 0;
+}
+
+// WAP to store detail of student (roll, name, address(city, zip code/pin code)) and display it.
