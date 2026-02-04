@@ -36,7 +36,7 @@
     
     // // return 0;
 
-    struct Student{
+    /* struct Student{
         int roll;
         char name[50];
         int age;
@@ -59,5 +59,32 @@
             }
         }
         printf("Youngest Student : %d %s %d\n", std[min_age].roll, std[min_age].name, std[min_age].age);
+        return 0;
+    } */
+
+    // WAP to store details of 5 employees and display the detauls of highest paid salary.
+    struct Employee{
+        int id;
+        char name[50];
+        float salary;
+    };
+    int main(){
+        struct Employee emp[5];
+        printf("Enter details of 5 employees (start from id, first name and salary) : \n");
+        for (int i = 0; i < 5; i++){
+            scanf("%d %s %f", &emp[i].id, emp[i].name, &emp[i].salary);
+        }
+        printf("Details of Employees : \n");
+        printf("ID\tName\tSalary\n");
+        for (int i = 0; i < 5; i++){
+            printf("%d\t%s\t%.2f\n", emp[i].id, emp[i].name, emp[i].salary);
+        }
+        int max_salary = 0;
+        for(int i = 0; i < 5; i++){
+            if(emp[i].salary > emp[max_salary].salary){
+                max_salary = i;
+            }
+        }
+        printf("Highest Paid Employee : %d %s %.2f\n", emp[max_salary].id, emp[max_salary].name, emp[max_salary].salary);
         return 0;
     }
