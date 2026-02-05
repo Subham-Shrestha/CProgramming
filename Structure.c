@@ -199,7 +199,7 @@ int main()
     return 0;
 } */
 
-struct Student{
+/* struct Student{
     int roll;
     char name[50];
     int age;
@@ -215,4 +215,5 @@ int main(){
     printf("Name : %s\n", p->name);
     printf("Age : %d\n", p->age);
     return 0;
-}
+} */
+
