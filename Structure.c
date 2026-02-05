@@ -131,7 +131,8 @@ int main()
     printf("Highest Paid Employee : %d %s %.2f\n", emp[max_salary].id, emp[max_salary].name, emp[max_salary].salary);
     return 0;
 } */
-struct Student{
+
+/* struct Student{
     int roll;
     char name[50];
     struct Birthdate{
@@ -147,6 +148,26 @@ int main(){
     printf("Name : %s\n", std.name);
     printf("Date of Birth : %d/%d/%d\n", std.dob.dd, std.dob.mm, std.dob.yy);
     return 0;
-}
+} */
 
 // WAP to store detail of student (roll, name, address(city, zip code/pin code)) and display it.
+struct Address{
+    char city[50];
+    int pin_code;
+};
+struct Student{
+    int roll;
+    char name[50];
+    struct Address addr;
+};
+int main(){
+    struct Student std;
+    printf("Enter roll, name, city and pin code : ");
+    scanf("%d %s %s %d", &std.roll, std.name, std.addr.city, &std.addr.pin_code);
+    printf("Details of student : \n");
+    printf("Roll : %d\n", std.roll);
+    printf("Name : %s\n", std.name);
+    printf("City : %s\n", std.addr.city);
+    printf("Pin Code : %d\n", std.addr.pin_code);
+    return 0;
+}
