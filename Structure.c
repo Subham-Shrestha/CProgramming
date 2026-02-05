@@ -151,7 +151,7 @@ int main(){
 } */
 
 // WAP to store detail of student (roll, name, address(city, zip code/pin code)) and display it.
-struct Address{
+/* struct Address{
     char city[50];
     int pin_code;
 };
@@ -169,5 +169,50 @@ int main(){
     printf("Name : %s\n", std.name);
     printf("City : %s\n", std.addr.city);
     printf("Pin Code : %d\n", std.addr.pin_code);
+    return 0;
+} */
+
+// Passing structure to function
+/* struct Address
+{
+    char city[50];
+    int pin_code;
+};
+struct Student
+{
+    int roll;
+    int age;
+    char name[50];
+    struct Address addr;
+};
+void display(struct Student s){
+    printf("Roll : %d\n", s.roll);
+    printf("Name : %s\n", s.name);
+    printf("Age : %d\n", s.age);
+}
+int main()
+{
+    struct Student std;
+    printf("Enter roll, name, age, city and pin code : ");
+    scanf("%d %s %d %s %d", &std.roll, std.name, &std.age, std.addr.city, &std.addr.pin_code);
+    display(std); 
+    return 0;
+} */
+
+struct Student{
+    int roll;
+    char name[50];
+    int age;
+};
+int main(){
+    struct Student std;
+    struct Student *p;
+    p = &std;
+    printf("Enter details(roll, name, age) : ");
+    scanf("%d %s %d", &std.roll, std.name, &std.age);
+    printf("Details of Student : \n");
+    printf("Roll : %d\n", p->roll);
+    printf("Name : %s\n", p->name);
+    printf("Age : %d\n", p->age);
     return 0;
 }
