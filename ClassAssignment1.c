@@ -680,13 +680,13 @@ int main(){
 } */
 
 // WAP to check the correct pin by giving user to initialize it.
-// #include<stdio.h>
-// int main(){
-//     int initialize, pin;
-//     printf("Enter a pin to initialize : ");
-//     scanf("%d", &initialize);
-    
-// }
+/* #include<stdio.h>
+int main(){
+    int initialize, pin;
+    printf("Enter a pin to initialize : ");
+    scanf("%d", &initialize);
+     
+} */
 
 // WAP to take a number and print it's reverse value.
 /* #include<stdio.h>
@@ -846,7 +846,7 @@ int main() {
 } */
 
 // WAP to display fibonacci series using loop.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     long n, t1 = 0, t2 = 1, nextTerm;
     printf("Enter the number of terms: ");
@@ -859,4 +859,4 @@ int main(){
         t2 = nextTerm;
     }
     return 0;
-}
+} */

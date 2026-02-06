@@ -52,3 +52,15 @@ int main(){
     printf("Num2 = %d", num2);
     return 0;
 } */
+
+/* int main(){
+    char full_name[100];
+    printf("Enter your full name : \n");
+    fgets(full_name, 100, stdin);
+    printf("Full name. : %s", full_name);
+    char newName[100];
+    printf("Enter full name : \n");
+    gets(newName);
+    printf("Gets name : %s\n", newName);
+} */
+

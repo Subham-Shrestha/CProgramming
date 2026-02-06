@@ -28,9 +28,9 @@ int main(){
 //     printf("The sum is : %d\n", add);
 // }
 // int main(){
-//     // printf("Enter num1 and num2 separated by space : ");
-//     // scanf("%d %d", &num1, &num2);
-//     // add_num(num1, num2, add);
+    // printf("Enter num1 and num2 separated by space : ");
+    // scanf("%d %d", &num1, &num2);
+    // add_num(num1, num2, add);
 //     add_num(5, 10); /* argument */
 //     add_num(2,3); /* argument */
 //     return 0;

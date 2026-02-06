@@ -269,7 +269,7 @@ int main(){
 } */
 
 // WAP to take input for rows and column and take input for elements and find their whole sum.
-#include<stdio.h>
+/* #include<stdio.h>
 int main(){
     int row, col;
     printf("Enter number of rows  : \n");
@@ -295,4 +295,48 @@ int main(){
     }
     printf("Sum : %d" , sum);
     return 0;
-}
+} */
+
+// WAP to find sum of matrix.
+/* #include<stdio.h>
+int main(){
+    int row, col;
+    printf("Enter number of rows : \n");
+    scanf("%d", &row);
+    printf("Enter number of columns : \n");
+    scanf("%d", &col);
+    int mat[row][col], sum = 0;
+    printf("Enter the elements : \n");
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++){
+            scanf("%d", &mat[i][j]);
+            sum += mat[i][j];
+        }
+    }
+    printf("Sum of matrix is : %d\n", sum);
+} */
+
+// WAP to transpose the matrix.
+/* #include<stdio.h>
+int main(){
+    int rows, col;
+    printf("Enter number of rows : \n");
+    scanf("%d", &rows);
+    printf("Enter number of columns : \n");
+    scanf("%d", &col);
+    int mat[rows][col], transpose[col][rows];
+    printf("Enter the elements : \n");
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < col; j++){
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    for (int i = 0; i < col; i++){
+        for (int j = 0; j < rows; j++){
+            transpose[i][j] = mat[j][i];
+            printf("%d ", transpose[i][j]);
+        }
+        printf("\n");
+    }
+} */
