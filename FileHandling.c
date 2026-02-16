@@ -36,4 +36,19 @@ int main(){
     fclose(fp);
     return 0; */
 
+// WAP to write Tribhuwan University and read to a file tu.txt.
+    /* char str[] = "Tribhuwan University";
+    FILE *fp = fopen("tu.txt", "w");
+    fputs(str, fp);
+    printf("Written in file successfully.\n");
+    fclose(fp); */
+    /* FILE *fp = fopen("tu.txt", "r");
+    while (!feof(fp)){
+        char n = fgetc(fp);
+        printf("%c", n);
+    }
+    printf("\n");
+    fclose(fp); */
+    
+    return 0;
 }
