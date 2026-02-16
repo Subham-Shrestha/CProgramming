@@ -340,3 +340,70 @@ int main(){
         printf("\n");
     }
 } */
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     char str[5][20] = {"banana", "apple", "dog", "cat", "ball"};
+//     int i, j;
+//     char temp[20];
+
+//     for (i = 0; i < 5 - 1; i++)
+//     {
+//         for (j = 0; j < 5 - i - 1; j++)
+//         {
+
+//             if (strcmp(str[j], str[j + 1]) > 0)
+//             {
+//                 strcpy(temp, str[j]);
+//                 strcpy(str[j], str[j + 1]);
+//                 strcpy(str[j + 1], temp);
+//             }
+//         }
+//     }
+
+//     printf("Sorted strings in ascending order:\n");
+//     for (i = 0; i < 5; i++)
+//     {
+//         printf("%s\n", str[i]);
+//     }
+
+//     return 0;
+// }
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+
+    char str[5][20] = {"Banana", "apple", "Dog", "cat", "ball"};
+    char temp[20];
+    int i, j;
+
+    for (i = 0; i < 5 - 1; i++)
+    {
+        for (j = 0; j < 5 - i - 1; j++)
+        {
+
+            if (strcasecmp(str[j], str[j + 1]) > 0)
+            {
+                strcpy(temp, str[j]);
+                strcpy(str[j], str[j + 1]);
+                strcpy(str[j + 1], temp);
+            }
+        }
+    }
+
+    printf("Sorted strings (case-insensitive):\n");
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("%s\n", str[i]);
+    }
+
+    return 0;
+}
