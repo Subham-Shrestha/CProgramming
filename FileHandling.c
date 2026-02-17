@@ -46,13 +46,71 @@ int main(){
     printf("Written in file successfully.\n");
     fclose(fp); */
     /* FILE *fp = fopen("tu.txt", "r");
+if(fp == NULL){
+    printf("No file found.\n");
+    return 0;
+}else{
     while (!feof(fp)){
         char n = fgetc(fp);
         printf("%c", n);
     }
-    printf("\n");
-    fclose(fp); */
-    
-    
+}
+printf("\n");
+fclose(fp); */
+
+// char ch;
+/* char col_nam[60];
+FILE *fp = fopen("tu.txt", "a");
+if (fp == NULL)
+{
+    printf("No file found.\n");
+    return 0;
+}else{
+    for (int i = 0; col_nam[i] != '\0'; i++){
+        scanf("%c", &col_nam[i]);
+        fputc(col_nam[i], fp);
+    }
+}
+fclose(fp); */
+
+/* FILE *fp = fopen("tu.txt", "r");
+if (fp == NULL)
+{
+    printf("No file found.\n");
+    return 0;
+}
+else
+{
+    while (!feof(fp))
+    {
+        char n = fgetc(fp);
+        printf("%c", n);
+    }
+}
+printf("\n");
+fclose(fp); */
+
+// WAP to count number of characters in a file tu.txt.
+/* FILE *fp = fopen("tu.txt", "r");
+if (fp == NULL)
+{
+    printf("No file found.\n");
+    return 0;
+}
+else
+{
+    int count = 0;
+    while (!feof(fp))
+    {
+        char n = fgetc(fp);
+        if (n != EOF)
+        {
+            count++;
+        }
+    }
+    printf("Number of characters in the file: %d\n", count);
+}
+fclose(fp); */
+
     return 0;
 }
