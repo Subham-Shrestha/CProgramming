@@ -112,5 +112,75 @@ else
 }
 fclose(fp); */
 
+// WAP to cont number of vowels in a file tu.txt.
+/* FILE *fp = fopen("tu.txt", "r");
+if (fp == NULL)
+{
+    printf("No file found.\n");
     return 0;
+}
+else
+{
+    int vowel_count = 0;
+    while (!feof(fp))
+    {
+        char n = fgetc(fp);
+        if (n == 'a' || n == 'e' || n == 'i' || n == 'o' || n == 'u' || n == 'A' || n == 'E' || n == 'I' || n == 'O' || n == 'U')
+        {
+            vowel_count++;
+        }
+    }
+    printf("Number of vowels in the file: %d\n", vowel_count);
+}
+fclose(fp); */
+
+// WAP to input your current address and store it in address.txt file and then append your permanent address to the file and check the no. of  vowels and consonents the file has.
+FILE *fp = fopen("address.txt", "w");
+if (fp == NULL)
+{
+    printf("No file found.\n");
+    return 0;
+}
+else
+{    char current_address[100];
+    printf("Enter your current address: ");
+    fgets(current_address, 100, stdin);
+    fputs(current_address, fp);
+    fclose(fp);
+
+    fp = fopen("address.txt", "a");
+    if (fp == NULL)
+    {
+        printf("No file found.\n");
+        return 0;
+    }
+    else
+    {
+        char permanent_address[100];
+        printf("Enter your permanent address: ");
+        fgets(permanent_address, 100, stdin);
+        fputs(permanent_address, fp);
+        fclose(fp);
+
+        fp = fopen("address.txt", "r");
+        if (fp == NULL){
+            printf("No file found.\n");
+            return 0;
+        }else{
+            int vowel_count = 0, consonant_count = 0;
+            while (!feof(fp)){
+                char ch = fgetc(fp);
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'){
+                    vowel_count++;
+                }else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')){
+                    consonant_count++;
+                }
+            }
+            printf("Number of vowels: %d\n", vowel_count);
+            printf("Number of consonants: %d\n", consonant_count);
+            fclose(fp);
+        }
+    }
+}
+return 0;
 }
