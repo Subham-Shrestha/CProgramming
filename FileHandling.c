@@ -39,7 +39,10 @@ int main(){
 // WAP to write Tribhuwan University and read to a file tu.txt.
     /* char str[] = "Tribhuwan University";
     FILE *fp = fopen("tu.txt", "w");
-    fputs(str, fp);
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        fputc(str[i], fp);
+    }
     printf("Written in file successfully.\n");
     fclose(fp); */
     /* FILE *fp = fopen("tu.txt", "r");
@@ -49,6 +52,7 @@ int main(){
     }
     printf("\n");
     fclose(fp); */
+    
     
     return 0;
 }
