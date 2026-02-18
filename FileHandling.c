@@ -262,15 +262,17 @@ return 0;
     //     printf("\n");
     //     fclose(vowel_fp);
     //     fclose(consonant_fp);
-    
 
-
-    FILE *fp = fopen("sentence.txt", "r");
+/*  FILE *fp = fopen("sentence.txt", "r");
     char print;
     for (int i = 0; i < 10; i++)
     {
         print = fgetc(fp);
         printf("%c", print);
     }
-    fclose(fp);
+    printf("\n");
+    fclose(fp); */
+
+    // WAP to copy the content of tu.txt to "university.txt"
 }
+
