@@ -135,7 +135,7 @@ else
 fclose(fp); */
 
 // WAP to input your current address and store it in address.txt file and then append your permanent address to the file and check the no. of  vowels and consonents the file has.
-FILE *fp = fopen("address.txt", "w");
+/* FILE *fp = fopen("address.txt", "w");
 if (fp == NULL)
 {
     printf("No file found.\n");
@@ -146,9 +146,11 @@ else
     printf("Enter your current address: ");
     fgets(current_address, 100, stdin);
     fputs(current_address, fp);
-    fclose(fp);
+    printf("Current address stored successfully.\n");
+    fclose(fp); */
 
-    fp = fopen("address.txt", "a");
+
+    /* fp = fopen("address.txt", "a");
     if (fp == NULL)
     {
         printf("No file found.\n");
@@ -160,9 +162,11 @@ else
         printf("Enter your permanent address: ");
         fgets(permanent_address, 100, stdin);
         fputs(permanent_address, fp);
-        fclose(fp);
+        printf("Permanent address stored.\n");
+        fclose(fp); */
 
-        fp = fopen("address.txt", "r");
+        
+      /*  fp = fopen("address.txt", "r");
         if (fp == NULL){
             printf("No file found.\n");
             return 0;
@@ -183,4 +187,90 @@ else
     }
 }
 return 0;
+} */
+
+    // WAP to input sentenxce and stgore it in sentence.txt Then copy all vowels from the sentence.txt to vowel.txt and consonants to consonent.txt.
+    // FILE *fp = fopen("sentence.txt", "w");
+    // FILE *vowel_fp = fopen("vowel.txt", "w");
+    // FILE *consonant_fp = fopen("consonant.txt", "w");
+    // if(fp == NULL){
+    //     printf("No file found.\n");
+    //     return 0;
+    // }else{
+    //     char sentence[10000];
+    //     printf("Enter a sentence : ");
+    //     fgets(sentence, 10000, stdin);
+    //     fputs(sentence, fp);
+    //     printf("Sentence stored successfully.\n");
+    //     fclose(fp);
+
+
+    //     fp = fopen("sentence.txt", "r");
+    //     if (fp == NULL)
+    //     {
+    //         printf("No file found.\n");
+    //         return 0;
+    //     }
+    //     if (vowel_fp == NULL || consonant_fp == NULL)
+    //     {
+    //         printf("Errror.\n");
+    //         return 0;
+    //     }
+    //             while(!feof(fp)){
+    //                 char ch = fgetc(fp);
+    //                 if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+    //                 {
+    //                     fputc(ch, vowel_fp);
+    //             }
+    //             else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    //             {
+    //                 fputc(ch, consonant_fp);
+    //             }
+    //         }
+        
+
+    //     }
+    //     fclose(fp);
+    //     fclose(vowel_fp);
+    //     fclose(consonant_fp);
+
+
+    //     vowel_fp = fopen("vowel.txt", "r");
+    //     consonant_fp = fopen("consonant.txt", "r");
+
+    //     if (vowel_fp == NULL || consonant_fp == NULL)
+    //     {
+    //         printf("No file found.\n");
+    //         return 0;
+    //     }
+    //     else
+    //     {
+    //         printf("Vowels : \n");
+    //         while (!feof(vowel_fp))
+    //         {
+    //             char n = fgetc(vowel_fp);
+    //             printf("%c", n);
+    //         }
+    //         printf("\n");
+    //         printf("Consonants : \n");
+    //         while (!feof(consonant_fp))
+    //         {
+    //             char n = fgetc(consonant_fp);
+    //             printf("%c", n);
+    //         }
+    //     }
+    //     printf("\n");
+    //     fclose(vowel_fp);
+    //     fclose(consonant_fp);
+    
+
+
+    FILE *fp = fopen("sentence.txt", "r");
+    char print;
+    for (int i = 0; i < 10; i++)
+    {
+        print = fgetc(fp);
+        printf("%c", print);
+    }
+    fclose(fp);
 }
