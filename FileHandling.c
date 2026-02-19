@@ -166,7 +166,7 @@ else
         fclose(fp); */
 
         
-      /*  fp = fopen("address.txt", "r");
+    /*  fp = fopen("address.txt", "r");
         if (fp == NULL){
             printf("No file found.\n");
             return 0;
@@ -274,5 +274,73 @@ return 0;
     fclose(fp); */
 
     // WAP to copy the content of tu.txt to "university.txt"
-}
+        /* FILE *tu, *uni;
+        char ch;
+        tu = fopen("tu.txt", "r");
+        if (tu == NULL){
+            printf("Error.\n");
+        }
+        uni = fopen("university.txt", "w");
+        if (uni == NULL){
+            printf("Error.\n");
+        }
+        while ((ch = fgetc(tu)) != EOF){
+            fputc(ch, uni);
+        }
+        printf("File copied successfully.\n");
+        fclose(tu);
+        fclose(uni);
+        return 0; */
 
+/* FILE *fp;
+int i;
+char ch;
+char uni[100] = "Tribhuwan University";
+fp = fopen("University.txt", "w+");
+for (i = 0; uni[i] != '\0'; i++){
+    fputc(uni[i], fp);
+}
+printf("Written successfully\n");
+rewind(fp);
+printf("Details of file : ");
+while(!feof(fp)){
+    ch = fgetc(fp);
+    printf("%c", ch);
+}
+fclose(fp); */
+
+/* FILE *fp;
+int i;
+char ch;
+char caste[100] = "Lama";
+fp = fopen("name.txt", "r+");
+printf("Details of file : ");
+while(!feof(fp)){
+    ch = fgetc(fp);
+    printf("%c", ch);
+}
+for (i = 0; caste[i] != '\0'; i++){
+    fputc(caste[i], fp);
+}
+printf("Written successfully.");
+fclose(fp); */
+
+FILE *fp;
+int i;
+char ch[1000];
+char caste[100] = "Lama";
+fp = fopen("name.txt", "a+");
+printf("Details of file : \n");
+if(fp == NULL){
+    printf("Error.");
+    return 0;
+}else{
+    for (i = 0; caste[i] != '\0'; i++)
+    {
+        scanf("%s", ch[i]);
+        fputc(caste[i], fp);
+    }
+}
+printf("Written successfully.\n");
+fclose(fp);
+}
