@@ -229,12 +229,12 @@ int main(){
             printf("Two\n");
             break;
         case 3 :
-            printf("Three\n");  
+            printf("Three\n");
             break;
-        case 4 : 
+        case 4 :
             printf("Four\n");
             break;
-        default : 
+        default :
             printf("Brother just enter number between 1 - 4.\n");
             break;
     }
@@ -245,7 +245,7 @@ int main(){
 /* #include <stdio.h>
 int main(){
     float num1 = 10.0;
-    float num2 = 5.0; 
+    float num2 = 5.0;
     char op;
     float result;
     printf("Enter an arithmetic operator (+, -, *, /): ");
@@ -392,11 +392,11 @@ int main(){
 /* #include<stdio.h>
 int main(){
     int number;
-    int isPrime = 1; 
+    int isPrime = 1;
     printf("Enter a number : \n");
     scanf("%d", &number);
     if(number <= 1){
-        isPrime = 0; 
+        isPrime = 0;
     }else{
         for(int i = 2; i < number; i++){
             if(number % i == 0){
@@ -468,8 +468,8 @@ int main(){
 
 // WAP to print the pattern without using nested loop.
 /* ****
-   ****
-   **** */
+ ****
+ **** */
 /* #include<stdio.h>
 int main(){
     int i;
@@ -481,8 +481,8 @@ int main(){
 
 // WAP to print the pattern using nested loop.
 /* ****
-    ****
-    **** */
+ ****
+ **** */
 /* #include<stdio.h>
 int main(){
     int i, j;
@@ -513,9 +513,9 @@ int main(){
 
 // WAP to print the pattern using nested loop.
 /* *
-   **
-   ***
-   **** */
+ **
+ ***
+ **** */
 /* #include<stdio.h>
 int main(){
     int i, j;
@@ -546,9 +546,9 @@ int main(){
 } */
 
 // WAP to print the following pattern.
-/* *** 
-   **
-   * */
+/* ***
+ **
+ * */
 /* #include<stdio.h>
 int main(){
     int i, j;
@@ -563,12 +563,12 @@ int main(){
 
 // WAP to make a pattern.
 /* *
-   **
-   ***
-   ****
-   ***
-   **
-   * */
+ **
+ ***
+ ****
+ ***
+ **
+ * */
 /* #include<stdio.h>
 int main(){
     int i, j;
@@ -590,7 +590,7 @@ int main(){
 /* 1
    12
    123
-   1234 
+   1234
    Sir detail explain that i = k. */
 /* #include<stdio.h>
 int main(){
@@ -612,36 +612,36 @@ int main(){
         for(int j = 1; j<=i; j++){
             printf("* ");
         }
-        printf("\n");   
+        printf("\n");
     }
     for(int i = 1; i<=4; i++){
         for(int j = 1; j<=i; j++){
             printf("* ");
         }
-        printf("\n");   
+        printf("\n");
     }
     return 0;
 } */
 
 // WAP to print the following pattern.
 /*   *
-    * *
-   * * *
-  * * * * */
- /* #include<stdio.h>
- int main(){
-    int i, j, space;
-    for(i = 1; i <= 4; i++){
-        for(space = 1; space <= 4 - i; space++){
-            printf(" ");
-        }
-        for(j = 1; j <= i; j++){
-            printf("* ");
-        }
-        printf("\n");
-    }
-    return 0;
- } */
+ * *
+ * * *
+ * * * * */
+/* #include<stdio.h>
+int main(){
+   int i, j, space;
+   for(i = 1; i <= 4; i++){
+       for(space = 1; space <= 4 - i; space++){
+           printf(" ");
+       }
+       for(j = 1; j <= i; j++){
+           printf("* ");
+       }
+       printf("\n");
+   }
+   return 0;
+} */
 
 //  WAP to print the following pattern.
 /* 1
@@ -659,7 +659,7 @@ int main(){
 //         printf("\n");
 //     }
 //     return 0;
-// } 
+// }
 
 // WAP to print "Try again" until user types the correct digits by initializing the correct value.
 /* #include<stdio.h>
@@ -685,14 +685,14 @@ int main(){
     int initialize, pin;
     printf("Enter a pin to initialize : ");
     scanf("%d", &initialize);
-     
+
 } */
 
 // WAP to take a number and print it's reverse value.
 /* #include<stdio.h>
 int main(){
     int num, reverse = 0, remainder;
-    printf("Enter a number : ");    
+    printf("Enter a number : ");
     scanf("%d", &num);
     while(num != 0){
         remainder = num %10;
@@ -726,7 +726,7 @@ int main(){
 //     convertcm = m * 0.01;
 //     convertm = cm * 100;
 //     printf("The cm to m is : %.2f\n", convertcm);
-//     printf("The m to cm is : %.2f\n", convertm); 
+//     printf("The m to cm is : %.2f\n", convertm);
 // }
 // void m_to_km(float m2, float km, float convertm2, float convertkm){
 //     convertm2 = km * 0.001;
@@ -812,17 +812,17 @@ int main(){
 #include<math.h>
 
 void aana(float cm) {
-    float convertcm = cm * 4;  
+    float convertcm = cm * 4;
     printf("The sq metre of aana is: %.2f\n", convertcm);
 }
 
 void paisa(float m) {
-    float convertkm = m * 3/4;  
+    float convertkm = m * 3/4;
     printf("The sq metre of paisa is: %.2f\n", convertkm);
 }
 
 void dam(float in) {
-    float convertft = in * 3/16;    
+    float convertft = in * 3/16;
     printf("The sq metre of dam is: %.2f\n", convertft);
 }
 
@@ -860,3 +860,24 @@ int main(){
     }
     return 0;
 } */
+
+// WAP to print chess board.
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for (i = 1; i <= 8; i++)
+    {
+        for (j = 1; j <= 8; j++)
+        {
+            if ((i + j) % 2 == 0)
+                printf("# ");
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+// The graphics.h code has been commented out as it is not compatible with modern compilers.

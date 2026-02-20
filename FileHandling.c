@@ -1,7 +1,8 @@
-#include<stdio.h>
-#include<string.h>
-int main(){
-// WAP to read and write in file.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    // WAP to read and write in file.
     /* int i;
     char name[50] = "Ram";
     FILE *fp = fopen("name.txt", "w"); //Make sure there is no other with "name.txt" while using "w" else it will override it.
@@ -10,7 +11,7 @@ int main(){
         fputc(name[i], fp);
     }
     printf("Written in file successfully.\n");
-    fclose(fp); */  
+    fclose(fp); */
     /* char n;
     FILE *fp = fopen("name.txt", "r");
     while(!feof(fp)){
@@ -36,7 +37,7 @@ int main(){
     fclose(fp);
     return 0; */
 
-// WAP to write Tribhuwan University and read to a file tu.txt.
+    // WAP to write Tribhuwan University and read to a file tu.txt.
     /* char str[] = "Tribhuwan University";
     FILE *fp = fopen("tu.txt", "w");
     for (int i = 0; str[i] != '\0'; i++)
@@ -58,97 +59,96 @@ if(fp == NULL){
 printf("\n");
 fclose(fp); */
 
-// char ch;
-/* char col_nam[60];
-FILE *fp = fopen("tu.txt", "a");
-if (fp == NULL)
-{
-    printf("No file found.\n");
-    return 0;
-}else{
-    for (int i = 0; col_nam[i] != '\0'; i++){
-        scanf("%c", &col_nam[i]);
-        fputc(col_nam[i], fp);
-    }
-}
-fclose(fp); */
-
-/* FILE *fp = fopen("tu.txt", "r");
-if (fp == NULL)
-{
-    printf("No file found.\n");
-    return 0;
-}
-else
-{
-    while (!feof(fp))
+    // char ch;
+    /* char col_nam[60];
+    FILE *fp = fopen("tu.txt", "a");
+    if (fp == NULL)
     {
-        char n = fgetc(fp);
-        printf("%c", n);
-    }
-}
-printf("\n");
-fclose(fp); */
-
-// WAP to count number of characters in a file tu.txt.
-/* FILE *fp = fopen("tu.txt", "r");
-if (fp == NULL)
-{
-    printf("No file found.\n");
-    return 0;
-}
-else
-{
-    int count = 0;
-    while (!feof(fp))
-    {
-        char n = fgetc(fp);
-        if (n != EOF)
-        {
-            count++;
+        printf("No file found.\n");
+        return 0;
+    }else{
+        for (int i = 0; col_nam[i] != '\0'; i++){
+            scanf("%c", &col_nam[i]);
+            fputc(col_nam[i], fp);
         }
     }
-    printf("Number of characters in the file: %d\n", count);
-}
-fclose(fp); */
-
-// WAP to cont number of vowels in a file tu.txt.
-/* FILE *fp = fopen("tu.txt", "r");
-if (fp == NULL)
-{
-    printf("No file found.\n");
-    return 0;
-}
-else
-{
-    int vowel_count = 0;
-    while (!feof(fp))
-    {
-        char n = fgetc(fp);
-        if (n == 'a' || n == 'e' || n == 'i' || n == 'o' || n == 'u' || n == 'A' || n == 'E' || n == 'I' || n == 'O' || n == 'U')
-        {
-            vowel_count++;
-        }
-    }
-    printf("Number of vowels in the file: %d\n", vowel_count);
-}
-fclose(fp); */
-
-// WAP to input your current address and store it in address.txt file and then append your permanent address to the file and check the no. of  vowels and consonents the file has.
-/* FILE *fp = fopen("address.txt", "w");
-if (fp == NULL)
-{
-    printf("No file found.\n");
-    return 0;
-}
-else
-{    char current_address[100];
-    printf("Enter your current address: ");
-    fgets(current_address, 100, stdin);
-    fputs(current_address, fp);
-    printf("Current address stored successfully.\n");
     fclose(fp); */
 
+    /* FILE *fp = fopen("tu.txt", "r");
+    if (fp == NULL)
+    {
+        printf("No file found.\n");
+        return 0;
+    }
+    else
+    {
+        while (!feof(fp))
+        {
+            char n = fgetc(fp);
+            printf("%c", n);
+        }
+    }
+    printf("\n");
+    fclose(fp); */
+
+    // WAP to count number of characters in a file tu.txt.
+    /* FILE *fp = fopen("tu.txt", "r");
+    if (fp == NULL)
+    {
+        printf("No file found.\n");
+        return 0;
+    }
+    else
+    {
+        int count = 0;
+        while (!feof(fp))
+        {
+            char n = fgetc(fp);
+            if (n != EOF)
+            {
+                count++;
+            }
+        }
+        printf("Number of characters in the file: %d\n", count);
+    }
+    fclose(fp); */
+
+    // WAP to cont number of vowels in a file tu.txt.
+    /* FILE *fp = fopen("tu.txt", "r");
+    if (fp == NULL)
+    {
+        printf("No file found.\n");
+        return 0;
+    }
+    else
+    {
+        int vowel_count = 0;
+        while (!feof(fp))
+        {
+            char n = fgetc(fp);
+            if (n == 'a' || n == 'e' || n == 'i' || n == 'o' || n == 'u' || n == 'A' || n == 'E' || n == 'I' || n == 'O' || n == 'U')
+            {
+                vowel_count++;
+            }
+        }
+        printf("Number of vowels in the file: %d\n", vowel_count);
+    }
+    fclose(fp); */
+
+    // WAP to input your current address and store it in address.txt file and then append your permanent address to the file and check the no. of  vowels and consonents the file has.
+    /* FILE *fp = fopen("address.txt", "w");
+    if (fp == NULL)
+    {
+        printf("No file found.\n");
+        return 0;
+    }
+    else
+    {    char current_address[100];
+        printf("Enter your current address: ");
+        fgets(current_address, 100, stdin);
+        fputs(current_address, fp);
+        printf("Current address stored successfully.\n");
+        fclose(fp); */
 
     /* fp = fopen("address.txt", "a");
     if (fp == NULL)
@@ -165,7 +165,6 @@ else
         printf("Permanent address stored.\n");
         fclose(fp); */
 
-        
     /*  fp = fopen("address.txt", "r");
         if (fp == NULL){
             printf("No file found.\n");
@@ -204,7 +203,6 @@ return 0;
     //     printf("Sentence stored successfully.\n");
     //     fclose(fp);
 
-
     //     fp = fopen("sentence.txt", "r");
     //     if (fp == NULL)
     //     {
@@ -227,13 +225,11 @@ return 0;
     //                 fputc(ch, consonant_fp);
     //             }
     //         }
-        
 
     //     }
     //     fclose(fp);
     //     fclose(vowel_fp);
     //     fclose(consonant_fp);
-
 
     //     vowel_fp = fopen("vowel.txt", "r");
     //     consonant_fp = fopen("consonant.txt", "r");
@@ -263,84 +259,158 @@ return 0;
     //     fclose(vowel_fp);
     //     fclose(consonant_fp);
 
-/*  FILE *fp = fopen("sentence.txt", "r");
-    char print;
-    for (int i = 0; i < 10; i++)
-    {
-        print = fgetc(fp);
-        printf("%c", print);
-    }
-    printf("\n");
-    fclose(fp); */
+    /*  FILE *fp = fopen("sentence.txt", "r");
+        char print;
+        for (int i = 0; i < 10; i++)
+        {
+            print = fgetc(fp);
+            printf("%c", print);
+        }
+        printf("\n");
+        fclose(fp); */
 
     // WAP to copy the content of tu.txt to "university.txt"
-        /* FILE *tu, *uni;
-        char ch;
-        tu = fopen("tu.txt", "r");
-        if (tu == NULL){
-            printf("Error.\n");
-        }
-        uni = fopen("university.txt", "w");
-        if (uni == NULL){
-            printf("Error.\n");
-        }
-        while ((ch = fgetc(tu)) != EOF){
-            fputc(ch, uni);
-        }
-        printf("File copied successfully.\n");
-        fclose(tu);
-        fclose(uni);
-        return 0; */
+    /* FILE *tu, *uni;
+    char ch;
+    tu = fopen("tu.txt", "r");
+    if (tu == NULL){
+        printf("Error.\n");
+    }
+    uni = fopen("university.txt", "w");
+    if (uni == NULL){
+        printf("Error.\n");
+    }
+    while ((ch = fgetc(tu)) != EOF){
+        fputc(ch, uni);
+    }
+    printf("File copied successfully.\n");
+    fclose(tu);
+    fclose(uni);
+    return 0; */
 
-/* FILE *fp;
-int i;
-char ch;
-char uni[100] = "Tribhuwan University";
-fp = fopen("University.txt", "w+");
-for (i = 0; uni[i] != '\0'; i++){
-    fputc(uni[i], fp);
-}
-printf("Written successfully\n");
-rewind(fp);
-printf("Details of file : ");
-while(!feof(fp)){
-    ch = fgetc(fp);
-    printf("%c", ch);
-}
-fclose(fp); */
+    /* FILE *fp;
+    int i;
+    char ch;
+    char uni[100] = "Tribhuwan University";
+    fp = fopen("University.txt", "w+");
+    for (i = 0; uni[i] != '\0'; i++){
+        fputc(uni[i], fp);
+    }
+    printf("Written successfully\n");
+    rewind(fp);
+    printf("Details of file : ");
+    while(!feof(fp)){
+        ch = fgetc(fp);
+        printf("%c", ch);
+    }
+    fclose(fp); */
 
-/* FILE *fp;
-int i;
-char ch;
-char caste[100] = "Lama";
-fp = fopen("name.txt", "r+");
-printf("Details of file : ");
-while(!feof(fp)){
-    ch = fgetc(fp);
-    printf("%c", ch);
-}
-for (i = 0; caste[i] != '\0'; i++){
-    fputc(caste[i], fp);
-}
-printf("Written successfully.");
-fclose(fp); */
-
-FILE *fp;
-int i;
-char ch[1000];
-char caste[100] = "Lama";
-fp = fopen("name.txt", "a+");
-printf("Details of file : \n");
-if(fp == NULL){
-    printf("Error.");
-    return 0;
-}else{
-    for (i = 0; caste[i] != '\0'; i++)
-    {
-        scanf("%s", ch[i]);
+    /* FILE *fp;
+    int i;
+    char ch;
+    char caste[100] = "Lama";
+    fp = fopen("name.txt", "r+");
+    printf("Details of file : ");
+    while(!feof(fp)){
+        ch = fgetc(fp);
+        printf("%c", ch);
+    }
+    for (i = 0; caste[i] != '\0'; i++){
         fputc(caste[i], fp);
     }
-}
-printf("Written successfully.\n");
-fclose(fp);
+    printf("Written successfully.");
+    fclose(fp); */
+
+    /* FILE *fp;
+    int i;
+    char ch[1000];
+    char caste[100] = "Lama";
+    fp = fopen("name.txt", "a+");
+    printf("Details of file : \n");
+    if(fp == NULL){
+        printf("Error.");
+        return 0;
+    }else{
+        for (i = 0; caste[i] != '\0'; i++)
+        {
+            scanf("%s", ch[i]);
+            fputc(caste[i], fp);
+        }
+    }
+    printf("Written successfully.\n");
+    fclose(fp); */
+
+    // WAP to save data of 3 employees to a file data.txt.
+    /* FILE *fp;
+    fp = fopen("data.txt", "w");
+    fprintf(fp,"Name \t Address \t Salary\n");
+    fprintf(fp, "Ram \t Kathmandu \t 50000\n");
+    fprintf(fp, "Kabir \t Dhangadi \t 40000\n");
+    fprintf(fp, "Sandip \t Sarlahi \t 3000\n");
+    fclose(fp);
+    return 0; */
+
+    // WAP to find the number of lines from a file data.txt.
+    /* int line = 0;
+    FILE *fp;
+    char ch;
+    fp = fopen("data.txt", "r");
+    while(!feof(fp)){
+        ch = fgetc(fp);
+        if(ch == '\n'){
+            line++;
+        }
+    }
+    printf("Numnber of lines : %d\n", line);
+    fclose(fp);
+    return 0; */
+
+// WAP to read the data from file data.txt using fscanf.
+    /* FILE *fp = fopen("data.txt", "r");
+    char name[10000], add[10000];
+    int salary;
+    while (!feof(fp))
+    {
+        fscanf(fp, "%s \t %s \t %d\n", name, add, &salary);
+        printf("%s \t %s \t %d\n", name, add, salary);
+    }
+    fclose(fp);
+    return 0; */
+    //Write the below code if the last data is printed twice in the above program.
+    /* FILE *fp = fopen("data.txt", "r");
+    char name[10000], add[10000], ch;
+    int salary, line = 0, count = 0;
+    while (!feof(fp))
+    {
+        ch = fgetc(fp);
+        if(ch == '\n'){
+            line++;
+        }
+    }
+    rewind(fp);
+    while(count < line){
+        fscanf(fp, "%s \t %s \t %d\n", name, add, &salary);
+        printf("%s \t %s \t %d\n", name, add, salary);
+        count++;
+    }
+    fclose(fp);
+    return 0; */
+
+    // WAP to print detail of employee whose address is Kathmandu from a file data.txt.
+    /* FILE *fp = fopen("data.txt", "r");
+    char name[10000], add[10000];
+    int salary;
+    while (!feof(fp))
+    {
+        fscanf(fp, "%s \t %s \t %d\n", name, add, &salary);
+        if(strcmp(add, "Kathmandu") == 0){
+            printf("%s \t %s \t %d\n", name, add, salary);
+        }
+    }
+    fclose(fp);
+    return 0; */
+
+    // WAP to input 5 employees detail and  store it in emp_data.txt. Print the detail of employee whose salary is greater than 20,000
+
+
 }

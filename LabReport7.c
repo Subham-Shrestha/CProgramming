@@ -44,8 +44,8 @@ int main(){
     for (i = 0; i < n; i++){
         scanf("%d", &arr[i]);
     }
-    start = arr;       
-    end = arr + n - 1; 
+    start = arr;
+    end = arr + n - 1;
     while (start < end){
         temp = *start;
         *start = *end;
@@ -114,7 +114,7 @@ int main(){
     int n, i;
     printf("Enter number of students: ");
     scanf("%d", &n);
-    struct Student s[n]; 
+    struct Student s[n];
     for (i = 0; i < n; i++){
         printf("\nEnter details of %d Student\n", i + 1);
         printf("Roll Number: ");
@@ -135,62 +135,62 @@ int main(){
     return 0;
 } */
 
-    // WAP to find and display the student with highest marks using structure.
-    /* #include <stdio.h>
-    struct Student{
-        int roll;
-        char name[50];
-        int marks;
-    };
+// WAP to find and display the student with highest marks using structure.
+/* #include <stdio.h>
+struct Student{
+    int roll;
+    char name[50];
+    int marks;
+};
 
-    int main(){
-        int n, i, maxIndex = 0;
-        printf("Enter number of students: ");
-        scanf("%d", &n);
-        struct Student s[n];
-        for (i = 0; i < n; i++){
-            printf("\nEnter details for %d student \n", i + 1);
-            printf("Roll Number: ");
-            scanf("%d", &s[i].roll);
-            printf("Name: ");
-            scanf("%s", s[i].name);
-            printf("Marks: ");
-            scanf("%d", &s[i].marks);
-        }
-        for (i = 1; i < n; i++){
-            if (s[i].marks > s[maxIndex].marks){
-                maxIndex = i;
-            }
-        }
-        printf("\nStudent with Highest Marks\n");
-        printf("Roll Number: %d\n", s[maxIndex].roll);
-        printf("Name: %s\n", s[maxIndex].name);
-        printf("Marks: %d\n", s[maxIndex].marks);
-        return 0;
-    } */
-
-    // WAP to pass a structure to a function and display it's members.
-    /* #include <stdio.h>
-    struct Student{
-        int id;
-        char name[50];
-    };
-    void display(struct Student s){
-        printf("\nStudent Details\n");
-        printf("Student ID: %d\n", s.id);
-        printf("Student Name: %s\n", s.name);
+int main(){
+    int n, i, maxIndex = 0;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    struct Student s[n];
+    for (i = 0; i < n; i++){
+        printf("\nEnter details for %d student \n", i + 1);
+        printf("Roll Number: ");
+        scanf("%d", &s[i].roll);
+        printf("Name: ");
+        scanf("%s", s[i].name);
+        printf("Marks: ");
+        scanf("%d", &s[i].marks);
     }
-    int main(){
-        struct Student s1;
-        printf("Enter Student ID: ");
-        scanf("%d", &s1.id);
-        printf("Enter Student Name: ");
-        scanf("%s", s1.name);
-        display(s1);
-        return 0;
-    } */
+    for (i = 1; i < n; i++){
+        if (s[i].marks > s[maxIndex].marks){
+            maxIndex = i;
+        }
+    }
+    printf("\nStudent with Highest Marks\n");
+    printf("Roll Number: %d\n", s[maxIndex].roll);
+    printf("Name: %s\n", s[maxIndex].name);
+    printf("Marks: %d\n", s[maxIndex].marks);
+    return 0;
+} */
 
-    // WAP to store student details using a nested structure
+// WAP to pass a structure to a function and display it's members.
+/* #include <stdio.h>
+struct Student{
+    int id;
+    char name[50];
+};
+void display(struct Student s){
+    printf("\nStudent Details\n");
+    printf("Student ID: %d\n", s.id);
+    printf("Student Name: %s\n", s.name);
+}
+int main(){
+    struct Student s1;
+    printf("Enter Student ID: ");
+    scanf("%d", &s1.id);
+    printf("Enter Student Name: ");
+    scanf("%s", s1.name);
+    display(s1);
+    return 0;
+} */
+
+// WAP to store student details using a nested structure
 /* #include<stdio.h>
     struct Address{
     char city[50];
@@ -228,17 +228,19 @@ int main(){
     return 0;
 } */
 
-    // WAP to use pointer to structure to read and display student details.
+// WAP to use pointer to structure to read and display student details.
 #include <stdio.h>
-struct Student{
+struct Student
+{
     int roll;
     char name[50];
     float marks;
 };
-int main(){
+int main()
+{
     struct Student s;
-    struct Student *ptr; 
-    ptr = &s; 
+    struct Student *ptr;
+    ptr = &s;
     printf("Enter Roll Number: ");
     scanf("%d", &ptr->roll);
     printf("Enter Name: ");
