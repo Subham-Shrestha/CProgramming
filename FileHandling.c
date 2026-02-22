@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-// int main()
-// {
+int main()
+{
     // WAP to read and write in file.
     /* int i;
     char name[50] = "Ram";
@@ -411,7 +411,7 @@ return 0;
     return 0; */
 
     // WAP to input 5 employees detail and  store it in emp_data.txt. Print the detail of employee whose salary is greater than 20,000
-    /*FILE *fp = fopen("emp_data.txt", "w");
+    FILE *fp = fopen("emp_data.txt", "w");
     char name[100], add[100];
     int salary;
     for (int i = 0; i < 5; i++)
@@ -440,7 +440,8 @@ return 0;
         }
     }
     fclose(fp);
-    return 0;*/
+    return 0;
+}
 
 // WAP to store detail of employee(id, name and age) to a binary file.
 // struct Employee{
@@ -477,31 +478,31 @@ return 0;
 // }
 
 // WAP to store 5 employee to binary file.
-struct Employee{
-    int id;
-    char name[1000];
-    int age;
-};
-int main(){
-    struct Employee emp[5];
-    FILE *fp = fopen("newEmployee.dat", "wb");
-    printf("Enter id, name and age of 5 employees : \n");
-    for (int i = 0; i < 5; i++)
-    {
-        scanf("%d %s %d", &emp[i].id, emp[i].name, &emp[i].age);
-        fwrite(&emp, sizeof(emp), 1, fp);
-    }
-    printf("Binary written success.\n");
-    fclose(fp);
+// struct Employee{
+//     int id;
+//     char name[1000];
+//     int age;
+// };
+// int main(){
+//     struct Employee emp[5];
+//     FILE *fp = fopen("newEmployee.dat", "wb");
+//     printf("Enter id, name and age of 5 employees : \n");
+//     for (int i = 0; i < 5; i++)
+//     {
+//         scanf("%d %s %d", &emp[i].id, emp[i].name, &emp[i].age);
+//         fwrite(&emp, sizeof(emp), 1, fp);
+//     }
+//     printf("Binary written success.\n");
+//     fclose(fp);
     
-    fp = fopen("newEmployee.dat", "rb");
-    for (int i = 0; i < 5; i++)
-    {
-        fread(&emp, sizeof(emp), 1, fp);
-        printf("Details of employee %d : \n", i + 1);
-        printf("ID : %d\n", emp[i].id);
-        printf("Name : %s\n", emp[i].name);
-        printf("Age : %d\n", emp[i].age);
-    }
-    fclose(fp);
-}
+//     fp = fopen("newEmployee.dat", "rb");
+//     for (int i = 0; i < 5; i++)
+//     {
+//         fread(&emp, sizeof(emp), 1, fp);
+//         printf("Details of employee %d : \n", i + 1);
+//         printf("ID : %d\n", emp[i].id);
+//         printf("Name : %s\n", emp[i].name);
+//         printf("Age : %d\n", emp[i].age);
+//     }
+//     fclose(fp);
+// }

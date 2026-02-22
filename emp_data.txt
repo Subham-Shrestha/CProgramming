@@ -1,5 +1,5 @@
-Ram 	 KTM 	 10000
-Ram2 	 KTM2 	 25000
-Ram3 	 KTM3 	 40000
-Ram4 	 KTM4 	 5000
-Ram5 	 KTM5 	 26000
+Ram 	 ktm 	 50000
+Ram2 	 ktm2 	 450000
+Ram3 	 ktm3 	 100000
+Ram4 	 ktm4 	 500
+Ram5 	 ktm5 	 100
