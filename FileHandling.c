@@ -458,20 +458,50 @@ return 0;
 //     fclose(fp);
 // }
 
-struct Employee
-{
+// struct Employee
+// {
+//     int id;
+//     char name[1000];
+//     int age;
+// };
+// int main()
+// {
+//     struct Employee emp;
+//     FILE *fp = fopen("employee.dat", "rb");
+//     fread(&emp, sizeof(emp), 1, fp);
+//     printf("Details of employee : \n");
+//     printf("ID : %d\n", emp.id);
+//     printf("Name : %s\n", emp.name);
+//     printf("Age : %d\n", emp.age);
+//     fclose(fp);
+// }
+
+// WAP to store 5 employee to binary file.
+struct Employee{
     int id;
     char name[1000];
     int age;
 };
-int main()
-{
-    struct Employee emp;
-    FILE *fp = fopen("employee.dat", "rb");
-    fread(&emp, sizeof(emp), 1, fp);
-    printf("Details of employee : \n");
-    printf("ID : %d\n", emp.id);
-    printf("Name : %s\n", emp.name);
-    printf("Age : %d\n", emp.age);
+int main(){
+    struct Employee emp[5];
+    FILE *fp = fopen("newEmployee.dat", "wb");
+    printf("Enter id, name and age of 5 employees : \n");
+    for (int i = 0; i < 5; i++)
+    {
+        scanf("%d %s %d", &emp[i].id, emp[i].name, &emp[i].age);
+        fwrite(&emp, sizeof(emp), 1, fp);
+    }
+    printf("Binary written success.\n");
+    fclose(fp);
+    
+    fp = fopen("newEmployee.dat", "rb");
+    for (int i = 0; i < 5; i++)
+    {
+        fread(&emp, sizeof(emp), 1, fp);
+        printf("Details of employee %d : \n", i + 1);
+        printf("ID : %d\n", emp[i].id);
+        printf("Name : %s\n", emp[i].name);
+        printf("Age : %d\n", emp[i].age);
+    }
     fclose(fp);
 }
