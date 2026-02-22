@@ -411,6 +411,37 @@ return 0;
     return 0; */
 
     // WAP to input 5 employees detail and  store it in emp_data.txt. Print the detail of employee whose salary is greater than 20,000
+    FILE *fp = fopen("emp_data.txt", "w");
+    char name[100], add[100];
+    int salary;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("Enter name, address and salary of employee %d : ", i + 1);
+        scanf("%s %s %d", name, add, &salary);
+        fprintf(fp, "%s \t %s \t %d\n", name, add, salary);
+    }
+    fclose(fp);
+
+    fp = fopen("emp_data.txt", "r");
+    if (fp == NULL)
+    {
+        printf("No file found.\n");
+        return 0;
+    }
+    else
+    {
+        while (!feof(fp))
+        {
+            fscanf(fp, "%s \t %s \t %d\n", name, add, &salary);
+            if (salary > 20000)
+            {
+                printf("%s \t %s \t %d\n", name, add, salary);
+            }
+        }
+    }
+    fclose(fp);
+    return 0;
+
 
 
 }
