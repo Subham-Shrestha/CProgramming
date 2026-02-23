@@ -411,7 +411,7 @@ return 0;
     return 0; */
 
     // WAP to input 5 employees detail and  store it in emp_data.txt. Print the detail of employee whose salary is greater than 20,000
-    FILE *fp = fopen("emp_data.txt", "w");
+    /* FILE *fp = fopen("emp_data.txt", "w");
     char name[100], add[100];
     int salary;
     for (int i = 0; i < 5; i++)
@@ -441,7 +441,7 @@ return 0;
     }
     fclose(fp);
     return 0;
-}
+} */
 
 // WAP to store detail of employee(id, name and age) to a binary file.
 // struct Employee{
@@ -505,4 +505,55 @@ return 0;
 //         printf("Age : %d\n", emp[i].age);
 //     }
 //     fclose(fp);
-// }
+
+// RANDOM access in file.
+    /* FILE *fp;
+    fp = fopen("tu.txt", "r");
+    if (fp == NULL) {
+        printf("No file found.\n");
+        return 0;
+    }
+    fseek(fp, 1, SEEK_SET);
+    char ch;
+    while((ch = fgetc(fp)) != EOF){ // shows the output from 1 index.
+        printf("%c\t", ch);
+    }
+    fclose(fp); */
+
+    /* FILE *fp;
+    char ch;
+    fp = fopen("university.txt", "r");
+    fseek(fp, 1, SEEK_CUR); // shows the output from 1 index of current position.
+    ch = fgetc(fp);
+    printf("%c\n", ch);
+    fclose(fp); */
+
+    /* FILE *fp;
+    char ch;
+    fp = fopen("university.txt", "r");
+    fseek(fp, -1, SEEK_END); // shows the output from last 1 index
+    ch = fgetc(fp);
+    printf("%c\n", ch);
+    fclose(fp); */
+
+    /* FILE *fp;
+    char ch;
+    fp = fopen("tu.txt", "r");
+    fseek(fp, 3, SEEK_SET); // shows the output from 3 index.
+    ch = fgetc(fp);
+    printf("%c\n", ch);
+    int p_val = ftell(fp); // shows the current position of file pointer.
+    printf("%d", p_val);
+    fclose(fp); */
+
+    /* FILE *fp = fopen("tu.txt", "r");
+    ch = fgetc(fp);
+    printf("%c", ch);
+    rewind(fp); // moves the file pointer to the beginning of the file.
+    int p_val = ftell(fp);
+    printf("%d\n", p_val);
+    fclose(fp); */
+
+    
+
+}
