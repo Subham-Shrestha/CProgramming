@@ -846,7 +846,7 @@ int main() {
 } */
 
 // WAP to display fibonacci series using loop.
-/* #include<stdio.h>
+#include<stdio.h>
 int main(){
     long n, t1 = 0, t2 = 1, nextTerm;
     printf("Enter the number of terms: ");
@@ -859,25 +859,25 @@ int main(){
         t2 = nextTerm;
     }
     return 0;
-} */
+}
 
 // WAP to print chess board.
-#include <stdio.h>
-int main()
-{
-    int i, j;
-    for (i = 1; i <= 8; i++)
-    {
-        for (j = 1; j <= 8; j++)
-        {
-            if ((i + j) % 2 == 0)
-                printf("# ");
-            else
-                printf("  ");
-        }
-        printf("\n");
-    }
-    return 0;
-}
+// #include <stdio.h>
+// int main()
+// {
+//     int i, j;
+//     for (i = 1; i <= 8; i++)
+//     {
+//         for (j = 1; j <= 8; j++)
+//         {
+//             if ((i + j) % 2 == 0)
+//                 printf("# ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
 // The graphics.h code has been commented out as it is not compatible with modern compilers.
