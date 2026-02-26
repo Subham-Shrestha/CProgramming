@@ -194,7 +194,7 @@ int main() {
     return 0;
 } */
 
-// WAP to update salary of every employee by 15% in the file "employees.txt". Write an easy code
+// WAP to update salary of every employee by 15% in the file "employees.txt".
 /* #include <stdio.h>
 #include <string.h>
 int main() {
