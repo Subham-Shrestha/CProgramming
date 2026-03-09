@@ -26,7 +26,7 @@ int main(){
 } */
 
 // enum example
-enum status
+/* enum status
 {
     FAIL = 0,
     PASS = 1
@@ -36,4 +36,31 @@ int main(){
     result = PASS;
     printf("Result : %d\n", result);
     return 0;
-}
+} */
+
+// Operator precedence.
+/* int main(){
+    int result = 10 * 2 + 5 - 3;
+    printf("Result : %d\n", result);
+} */
+/* int main()
+{
+    int result = 5-2+5*10;
+    printf("Result : %d\n", result);
+} */
+
+// Associativity
+//left to right direction.
+/* int main(){
+    int result = 10 - 5 - 2;
+    printf("Result : %d\n", result);
+} */
+// right to left direction.
+/* int main(){
+    int num1 = 5, num2 = 10, num3 = 15;
+    printf("Before : num1 = %d num2 = %d num3 = %d\n", num1, num2, num3);
+    int result = num1 = num2 = num3;
+    printf("After : num1 = %d num2 = %d num3 = %d\n", num1, num2, num3);
+    return 0;
+} */
+
