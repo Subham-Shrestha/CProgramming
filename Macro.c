@@ -25,4 +25,15 @@ int main(){
     printf("Area : %.2f\n", area);
 } */
 
-// 
+// enum example
+enum status
+{
+    FAIL = 0,
+    PASS = 1
+};
+int main(){
+    enum status result;
+    result = PASS;
+    printf("Result : %d\n", result);
+    return 0;
+}
